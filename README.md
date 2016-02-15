@@ -1,6 +1,6 @@
 == README
 
-# Ruby on Rails Tutorial: sample application
+# My blog
 
 Sample application
 
