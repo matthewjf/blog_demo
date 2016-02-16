@@ -3,6 +3,8 @@
 
 /* mixins, variables, etc. */
 $gray-medium-light: #eaeaea;
+$primary: hsl(215, 75%,  58%);
+$amount: 8%;
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -30,6 +32,19 @@ textarea {
     margin-bottom: 10px;
   }
 }
+
+.btn {
+  background-color: $primary;
+  border: none;
+  text-decoration: none;
+  &:hover {
+    background-color: lighten($primary, $amount);
+  }
+  &:active {
+    background-color: darken($primary, $amount);
+  }
+}
+
 
 /* typography */
 
@@ -64,13 +79,13 @@ p {
   float: left;
   margin-right: 1rem;
   font-size: 1.7em;
-  color: hsl(0, 0%, 100%);
+  color: $primary;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: hsl(0, 0%, 100%);
+    color: lighten($primary, $amount);
     text-decoration: none;
   }
 }
@@ -189,6 +204,9 @@ input {
     overflow: auto;
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
+  }
+  .pagination {
+    text-align: center;
   }
 }
 
