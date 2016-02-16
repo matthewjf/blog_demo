@@ -3,7 +3,7 @@ require 'test_helper'
 class PostTest < ActiveSupport::TestCase
   def setup
     @user = users(:rails)
-    @post = @user.posts.new(content: "Lorem ipsum", title: "Dolor")
+    @post = @user.posts.new(title: "Dolor")
   end
 
   test "should be valid" do
@@ -17,11 +17,6 @@ class PostTest < ActiveSupport::TestCase
 
   test "title should be present" do
     @post.title = nil
-    assert_not @post.valid?
-  end
-
-  test "content should be present" do
-    @post.content = "    "
     assert_not @post.valid?
   end
 

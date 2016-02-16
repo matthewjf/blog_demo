@@ -33,19 +33,25 @@ textarea {
   }
 }
 
-.btn {
+.btn-primary {
   background-color: $primary;
   border: none;
   text-decoration: none;
+  outline: none !important;
   &:hover {
     background-color: lighten($primary, $amount);
   }
   &:active {
     background-color: darken($primary, $amount);
   }
+  &:focus {
+    box-shadow: none;
+  }
 }
 
-
+.form-control:focus {
+  box-shadow: none !important;
+}
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
