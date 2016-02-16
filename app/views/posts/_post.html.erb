@@ -1,6 +1,5 @@
 <li id="post-<% post.id %>">
-
-<!-- img -->
+  <!-- insert image -->
   <span class="timestamp"><%= post.created_at %></span>
   <span class="title"><%= link_to post.title, post %></span>
   <span class="content"><%= truncate(post.content, length: 150) %></span>
