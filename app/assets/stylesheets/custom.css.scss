@@ -64,6 +64,14 @@ textarea {
 .form-control:focus {
   box-shadow: none !important;
 }
+
+ul {
+  padding: 0 30px;
+}
+
+ol {
+  padding: 0 30px;
+}
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -105,6 +113,12 @@ p {
   &:hover {
     color: lighten($primary, $amount);
     text-decoration: none;
+  }
+}
+
+.navbar-nav {
+  li {
+    float: right;
   }
 }
 
@@ -242,7 +256,7 @@ input {
 
 .posts {
   list-style: none;
-  padding: 0;
+  padding: 0 15px;
   li {
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;

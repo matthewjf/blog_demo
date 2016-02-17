@@ -1,0 +1,9 @@
+<% if @posts.any? %>
+  <ol class="posts">
+    <%= render @posts %>
+  </ol>
+
+  <div class="pagination">
+    <%= will_paginate @posts %>
+  </div>
+<% end %>
