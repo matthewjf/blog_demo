@@ -3,15 +3,19 @@
 orange:
   title: "Hi"
   created_at: <%= 10.minutes.ago %>
+  user: rails
 
 tau_manifesto:
   title: "Yo mama"
   created_at: <%= 3.years.ago %>
+  user: rails
 
 cat_video:
   title: "hatechu"
   created_at: <%= 2.hours.ago %>
+  user: rails
 
 most_recent:
   title: "this is a blog post title"
   created_at: <%= Time.zone.now %>
+  user: rails

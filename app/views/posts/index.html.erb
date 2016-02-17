@@ -1,0 +1,5 @@
+<% provide(:title, 'Posts') %>
+
+<% if current_user.admin? %>
+  <%= link_to "create post", new_post_path, class: "btn btn-primary" %>
+<% end %>

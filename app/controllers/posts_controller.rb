@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  before_action :logged_in_user, except: [:index, :show]
   before_action :admin_user, except: [:index, :show]
+  before_action :logged_in_user, except: [:index, :show]
 
   def index
     @posts = Post.paginate(page: params[:page])
