@@ -1,5 +1,18 @@
 <% provide(:title, 'Posts') %>
+<h1>Posts</h1>
 
-<% if current_user.admin? %>
-  <%= link_to "create post", new_post_path, class: "btn btn-primary" %>
+<div>
+  <% if logged_in? && current_user.admin? %>
+    <%= link_to "create post", new_post_path, class: "btn btn-primary" %>
+  <% end %>
+</div>
+
+<% if @posts.any? %>
+  <ol class="posts">
+    <%= render @posts %>
+  </ol>
+
+  <div class="pagination">
+    <%= will_paginate %>
+  </div>
 <% end %>

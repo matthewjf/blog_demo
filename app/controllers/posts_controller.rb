@@ -15,17 +15,17 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = current_user.microposts.build(micropost_params)
+    @post = current_user.posts.build(post_params)
     if @post.save
       flash[:success] = "Post created"
       redirect_to @post
     else
-      render 'static_pages/home'
+      render 'new'
     end
   end
 
   def destroy
-    @post.destroy
+    Post.find(params[:id]).destroy
     flash[:success] = "Post deleted"
     redirect_to root_url
   end
@@ -35,6 +35,7 @@ class PostsController < ApplicationController
   end
 
   def update
+    @post = Post.find(params[:id])
     if @post.update_attributes(post_params)
       flash[:success] = "Post updated"
       redirect_to @post
@@ -45,6 +46,6 @@ class PostsController < ApplicationController
 
   private
     def post_params
-      params.require(:post).permit(:title, :content)
+      params.require(:post).permit(:title)
     end
 end

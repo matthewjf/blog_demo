@@ -1,6 +1,10 @@
 <li id="post-<% post.id %>">
+
   <!-- insert image -->
-  <span class="timestamp"><%= post.created_at %></span>
-  <span class="title"><%= link_to post.title, post %></span>
-  <span class="content"><%= truncate(post.content, length: 150) %></span>
+  <span class="h3 title"><%= post.title %></span>
+  <span class="timestamp">
+    <%= post.created_at.to_date.to_formatted_s :long %>
+  </span>
+  <!-- insert section preview -->
+  <span class="preview"><%= link_to "read more", post %></span>
 </li>

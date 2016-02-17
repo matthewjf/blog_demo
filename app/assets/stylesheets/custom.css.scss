@@ -33,8 +33,16 @@ textarea {
   }
 }
 
-.btn-primary {
-  background-color: $primary;
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.btn {
+  background-color: $gray-darker;
   border: none;
   text-decoration: none;
   outline: none !important;
@@ -47,6 +55,10 @@ textarea {
   &:focus {
     box-shadow: none;
   }
+}
+
+.btn-primary {
+  background-color: $primary;
 }
 
 .form-control:focus {
@@ -224,4 +236,37 @@ input {
   width: 100%;
   margin-top: 45px;
   @include box_sizing;
+}
+
+/* posts index */
+
+.posts {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .title {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+  }
+}
+
+/* post show */
+
+.post {
+  h1 {
+    font-size: 3em;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .links {
+    float: right;
+  }
 }
