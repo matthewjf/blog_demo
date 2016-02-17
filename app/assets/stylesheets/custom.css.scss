@@ -119,17 +119,17 @@ p {
 .navbar-right {
   ul {
     float: right;
+    li {
+      float: left;
+    }
   }
-  li {
-    float: left;
+  .dropdown-menu {
+    li {
+      float: none !important;
+    }
   }
 }
 
-.dropdown-menu {
-  li {
-    float: none !important;
-  }
-}
 
 /* footer */
 
