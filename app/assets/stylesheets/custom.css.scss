@@ -116,9 +116,18 @@ p {
   }
 }
 
-.navbar-nav {
-  li {
+.navbar-right {
+  ul {
     float: right;
+  }
+  li {
+    float: left;
+  }
+}
+
+.dropdown-menu {
+  li {
+    float: none !important;
   }
 }
 
