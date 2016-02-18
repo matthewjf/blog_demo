@@ -4,6 +4,7 @@ class PostTest < ActiveSupport::TestCase
   def setup
     @user = users(:rails)
     @post = @user.posts.new(title: "Dolor")
+    @section = @post.sections.new(body: "Ipsum")
   end
 
   test "should be valid" do
