@@ -65,13 +65,6 @@ textarea {
   box-shadow: none !important;
 }
 
-ul {
-  padding: 0 30px;
-}
-
-ol {
-  padding: 0 30px;
-}
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -289,7 +282,9 @@ input {
     margin-bottom: 10px;
     text-align: left;
   }
-  .links {
-    float: right;
-  }
+}
+
+.admin-links {
+  @include box-sizing;
+  float: right;
 }

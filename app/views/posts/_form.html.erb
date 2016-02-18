@@ -4,13 +4,18 @@
   <%= f.label :title %>
   <%= f.text_field :title, class: 'form-control' %>
 
+  <div class="section">
+    <%= f.fields_for :sections do |section| %>
+      <div>
+        <%= render 'section_fields', f: section %>
+      </div>
+    <% end %>
+    <div>
+      <%= link_to_add_association 'add section', f, :sections %>
+    </div>
+  </div>
+
+
+
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>
-<!-- title -->
-
-<!-- sections -->
-  <!-- section image -->
-  <!-- section body -->
-  <!-- delete section -->
-
-<!-- add new section -->

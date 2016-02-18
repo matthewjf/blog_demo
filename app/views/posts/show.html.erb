@@ -1,6 +1,6 @@
 <% provide(:title, @post.title) %>
 <div class="post">
-  <div class="links">
+  <div class="admin-links">
     <% if logged_in? && current_user.admin? %>
       <%= link_to "edit", edit_post_path(@post) %>
       <%= link_to "delete", @post, method: :delete, data: {confirm: "You Sure?"} %>
@@ -12,5 +12,5 @@
   <span class="timestamp">
     <%= @post.created_at.to_date.to_formatted_s :long %>
   </span>
+  <div class="sections"><%= render 'shared/sections' %></div>
 </div>
-<!-- insert sections -->

@@ -7,11 +7,13 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post= Post.find(params[:id])
+    @post = Post.find(params[:id])
+    @sections = @post.sections
   end
 
   def new
     @post = Post.new
+    @post.sections.build
   end
 
   def create
@@ -46,6 +48,6 @@ class PostsController < ApplicationController
 
   private
     def post_params
-      params.require(:post).permit(:title)
+      params.require(:post).permit(:title, sections_attributes: [:id, :body, :_destroy])
     end
 end
