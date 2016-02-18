@@ -101,7 +101,7 @@ h2 {
 
 p {
   font-size: 1.1em;
-  line-height: 1.7em;
+  line-height: 1.4em;
 }
 
 /* header */
@@ -308,6 +308,7 @@ color: $gray-light !important;
   .timestamp {
     color: $gray-light;
     display: block;
+    margin-bottom: 5px;
   }
 }
 
@@ -327,5 +328,8 @@ color: $gray-light !important;
   .timestamp {
     color: $gray-light;
     display: block;
+  }
+  .section {
+    margin-bottom: 15px;
   }
 }

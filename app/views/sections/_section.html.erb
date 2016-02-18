@@ -1,4 +1,6 @@
-<li id="section-<% section.id %>">
-  <span class="h3 title"><%= section.title %></span>
-  <p><%= section.body %></p>
-</li>
+<div class="section">
+  <li id="section-<% section.id %>">
+    <span class="h2 title"><%= section.title %></span>
+    <p><%= simple_format section.body %></p>
+  </li>
+</div>
