@@ -12,6 +12,13 @@ $amount: 8%;
   box-sizing: border-box;
 }
 
+/* reset stylesheets */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 /* universal */
 
 body {
@@ -238,6 +245,9 @@ input {
 .users {
   list-style: none;
   margin: 0;
+  ul {
+    -webkit-padding-start: none;
+  }
   li {
     overflow: auto;
     padding: 10px 0;
@@ -258,11 +268,15 @@ input {
   @include box_sizing;
 }
 
+.admin-links {
+
+}
+
 /* posts index */
 
 .posts {
   list-style: none;
-  padding: 0 15px;
+  padding: 0px;
   li {
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
@@ -280,15 +294,18 @@ input {
 /* post show */
 
 .post {
+  list-style: none;
   h1 {
     font-size: 3em;
     letter-spacing: -2px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     text-align: left;
   }
-}
-
-.admin-links {
-  @include box-sizing;
-  float: right;
+  .post-header {
+    margin-bottom: 15px;
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+  }
 }

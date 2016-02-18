@@ -8,11 +8,11 @@
   <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
 </div>
 
-<div class="admin-links">
-  <% if logged_in? && current_user.admin? %>
+<% if logged_in? && current_user.admin? %>
+  <div class="admin-links">
     <%= link_to "create post", new_post_path %>
-    <% end %>
-</div>
+  </div>
+<% end %>
 
 <div class="posts">
   <%= render 'shared/posts' %>

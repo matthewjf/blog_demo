@@ -8,9 +8,11 @@
   </div>
 
 <!-- insert image -->
-  <h1><%= @post.title %></h1>
-  <span class="timestamp">
-    <%= @post.created_at.to_date.to_formatted_s :long %>
-  </span>
+  <div class="post-header">
+    <h1><%= @post.title %></h1>
+    <span class="timestamp">
+      <%= @post.created_at.to_date.to_formatted_s :long %>
+    </span>
+  </div>
   <div class="sections"><%= render 'shared/sections' %></div>
 </div>
