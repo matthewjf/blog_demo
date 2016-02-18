@@ -1,6 +1,8 @@
 <li class="control-group nested-fields">
-  <div class="controls">
-    <%= link_to_remove_association "remove", f, class: 'admin-links' %>
+  <div class="controls field-group">
+    <%= f.label :section %>
+    <%= f.text_field :title, class: 'form-control', placeholder: "section title" %>
     <%= f.text_area :body, class: 'form-control', placeholder: "section body" %>
+    <%= link_to_remove_association "remove", f, class: 'admin-links field-group' %>
   </div>
 </li>

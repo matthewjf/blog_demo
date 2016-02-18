@@ -3,6 +3,7 @@
 
 /* mixins, variables, etc. */
 $gray-medium-light: #eaeaea;
+$gray-light: #888888;
 $primary: hsl(215, 75%,  58%);
 $amount: 8%;
 
@@ -200,10 +201,14 @@ aside {
 
 /* forms */
 
+.field-group {
+  margin-bottom: 15px;
+}
+
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   @include box_sizing;
 }
 
@@ -269,7 +274,22 @@ input {
 }
 
 .admin-links {
+}
 
+input::-webkit-input-placeholder {
+color: $gray-light !important;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+color: $gray-light !important;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+color: $gray-light !important;
+}
+
+input:-ms-input-placeholder {
+color: $gray-light !important;
 }
 
 /* posts index */
