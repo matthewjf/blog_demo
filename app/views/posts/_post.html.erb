@@ -6,8 +6,10 @@
     <%= post.created_at.to_date.to_formatted_s :long %>
   </span>
   <span class="preview">
-    <%= truncate sanitize(post.sections.first.body), length: 250 %>
-    <%= link_to 'more', post %>
+    <% if post.sections.any? %>
+      <%= truncate sanitize(post.sections.first.body), length: 250 %>
+      <%= link_to 'more', post %>
+    <% end %>
   <span>
 
 </li>
