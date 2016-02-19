@@ -9,6 +9,8 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @sections = @post.sections
+    @comments = @post.comments.paginate(page: params[:page])
+    @comment = @post.comments.new
   end
 
   def new

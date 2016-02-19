@@ -1,0 +1,11 @@
+<h3>Comments (<%= @post.comments.count %>)</h3>
+
+<% if @comments.any? %>
+  <ol>
+    <%= render @comments %>
+  </ol>
+
+  <div class="pagination">
+    <%= will_paginate @comments %>
+  </div>
+<% end %>

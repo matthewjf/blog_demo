@@ -1,0 +1,9 @@
+<li id="comment-<% comment.id %>">
+  <h4 class="author"><%= User.find_by(comment.user_id).name %></h4>
+  <div class="timestamp">
+    <%= time_ago_in_words(comment.created_at) %> ago
+  </div>
+  <div>
+    <%= comment.body %>
+  </div>
+</li>
