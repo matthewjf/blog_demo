@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :logged_in_user
+  before_action :logged_in_user, only: :create
 
   def create
     @post = Post.find(params[:post_id])
