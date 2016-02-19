@@ -14,8 +14,8 @@ class CommentsController < ApplicationController
       flash[:success] = "Comment added"
       redirect_to @post
     else
-      # not sure how to get error messages here
-      render @post
+      flash[:danger] = "Comment can't be empty"
+      redirect_to @post
     end
   end
 
