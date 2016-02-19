@@ -338,3 +338,14 @@ color: $gray-light !important;
     margin-bottom: 5px;
   }
 }
+
+/* labels index */
+
+.labels {
+  list-style: none;
+  padding: 0px;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
