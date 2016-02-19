@@ -1,0 +1,8 @@
+<% if @post.labels.any? %>
+  <span>
+    <%= 'Label'.pluralize(@post.labels.count) %>:
+    <% @post.labels.each do |label| %>
+      <%= link_to label.name, label %>
+    <% end %>
+  </span>
+<% end %>
