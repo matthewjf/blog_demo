@@ -1,6 +1,11 @@
 class CommentsController < ApplicationController
   before_action :logged_in_user, only: :create
 
+  def index
+    @post = Post.find(params[:post_id])
+    redirect_to @post
+  end
+
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.create(comment_params)
