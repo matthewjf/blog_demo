@@ -1,9 +1,15 @@
-<div class="section">
-  <li id="section-<% section.id %>">
-    <div class="h2 title"><%= section.title %></div>
+<li id="section-<% section.id %>">
+  <div class="section">
+    <% if section.title? %>
+      <div class="h2 title"><%= section.title %></div>
+    <% end %>
     <div>
-      <span><%= image_tag section.picture.url if section.picture? %>
-      <span><%= section.body.html_safe %></span>
+      <% if section.picture? %>
+        <div class="image">
+          <%= image_tag section.picture.url, class: "img" %>
+        </div>
+      <% end %>
+      <%= section.body.html_safe %>
     </div>
-  </li>
-</div>
+  </div>
+</li>

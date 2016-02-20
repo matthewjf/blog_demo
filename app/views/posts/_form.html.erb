@@ -1,37 +1,43 @@
-<%= form_for(@post, html: { multipart: true }) do |f| %>
-  <%= render 'shared/error_messages', object: f.object %>
+<div class="post">
+  <%= form_for(@post, html: { multipart: true }) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
 
-  <%= f.label :title %>
-  <%= f.text_field :title, class: 'form-control' %>
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
 
-  <%= f.label :body %>
-  <%= f.text_area :body, class: 'form-control' %>
+    <%= f.label :body %>
+    <%= f.text_area :body, rows: 5, class: "textarea form-control" %>
 
-  <%= f.label :picture, 'Primary image' %>
-  <p><%= image_tag @post.picture.url if @post.picture?%></p>
-  <span class="picture">
-    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png', class: 'field-group' %>
-  </span>
+    <%= f.label :picture, 'Primary image' %>
+    <span>
+      <% if @post.picture? %>
+        <%= image_tag @post.picture.url, class: "image" %>
+      <% end %>
+    </span>
+    <span class="picture">
+      <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png', class: 'field-group' %>
+    </span>
 
-  <div class="section">
-    <%= f.fields_for :sections do |section| %>
-      <div>
-        <%= render 'section_fields', f: section %>
+    <div class="section">
+      <%= f.fields_for :sections do |section| %>
+        <div>
+          <%= render 'section_fields', f: section %>
+        </div>
+      <% end %>
+      <div id="add">
+        <%= link_to_add_association 'add section', f, :sections %>
       </div>
-    <% end %>
-    <div>
-      <%= link_to_add_association 'add section', f, :sections %>
     </div>
-  </div>
 
-  <p>
-    <%= f.label :label_list %>
-    <%= f.text_field :label_list, class: 'form-control field-group' %>
-  </p>
+    <p>
+      <%= f.label :label_list %>
+      <%= f.text_field :label_list, class: 'form-control field-group' %>
+    </p>
 
 
-  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
-<% end %>
+    <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+  <% end %>
+</div>
 
 <script type="text/javascript">
   $('#micropost_picture').bind('change', function() {

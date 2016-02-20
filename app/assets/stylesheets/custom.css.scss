@@ -56,6 +56,7 @@ textarea {
 .btn {
   border: none;
   text-decoration: none;
+  border-radius: 3px;
   outline: none !important;
   &:focus {
     box-shadow: none;
@@ -68,11 +69,15 @@ textarea {
   }
 }
 
-.form-control:focus {
+.form-control {
   box-shadow: none !important;
+  border-radius: 3px;
 }
 
-
+.page-content {
+  max-width: 1024px;
+  margin: auto;
+}
 
 
 /* typography */
@@ -311,6 +316,20 @@ color: $gray-light !important;
     display: block;
     margin-bottom: 5px;
   }
+  .preview {
+    display: flex;
+    -webkit-flex-direction: row;
+    .image {
+      width: 30%;
+      margin-right: 10px;
+    }
+    .img {
+      width: 100%;
+    }
+    .text {
+      width: 100%;
+    }
+  }
 }
 
 /* post show */
@@ -332,11 +351,24 @@ color: $gray-light !important;
   }
   .section {
     margin-bottom: 15px;
+    .title {
+      margin-bottom: 15px;
+    }
+    .image {
+      margin-bottom: 15px;
+      .img {
+        width: 80%;
+        margin: auto;
+      }
+    }
   }
   .labels {
     color: $gray-light;
     display: block;
     margin-bottom: 5px;
+  }
+  .image {
+    width: 100%;
   }
 }
 
