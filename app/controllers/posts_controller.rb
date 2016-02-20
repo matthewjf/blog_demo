@@ -15,7 +15,6 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @post.sections.build
   end
 
   def create
@@ -50,7 +49,7 @@ class PostsController < ApplicationController
 
   private
     def post_params
-      params.require(:post).permit(:title, :label_list,
-            sections_attributes: [:id, :title, :body, :_destroy])
+      params.require(:post).permit(:title, :body, :picture, :label_list,
+            sections_attributes: [:id, :title, :body, :picture, :_destroy])
     end
 end

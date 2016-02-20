@@ -5,12 +5,15 @@ class Post < ActiveRecord::Base
   has_many :labels, through: :labelings
   has_many :comments, dependent: :destroy
 
+  mount_uploader :picture, PictureUploader
+
   accepts_nested_attributes_for :sections, allow_destroy: true, reject_if: :all_blank
 
   default_scope -> { order(created_at: :desc) }
   validates :user_id, presence: true
   validates :title, presence: true
-  validates :sections, presence: true
+  validates :body, presence: true
+  # validates :picture, presence: true
 
   def label_list
     labels.join(", ")

@@ -1,6 +1,9 @@
 <div class="section">
   <li id="section-<% section.id %>">
-    <span class="h2 title"><%= section.title %></span>
-    <p><%= section.body.html_safe %></p>
+    <div class="h2 title"><%= section.title %></div>
+    <div>
+      <span><%= image_tag section.picture.url if section.picture? %>
+      <span><%= section.body.html_safe %></span>
+    </div>
   </li>
 </div>

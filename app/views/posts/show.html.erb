@@ -14,6 +14,8 @@
       <%= @post.created_at.to_date.to_formatted_s :long %>
     </span>
   </div>
+  <div class="post-body"><%= @post.body %></div>
+
   <div class="sections"><%= render 'shared/sections' %></div>
   <div class="labels"><%= render 'shared/labels' %></div>
 

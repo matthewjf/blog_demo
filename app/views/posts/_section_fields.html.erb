@@ -3,6 +3,9 @@
     <%= f.label :section %>
     <%= f.text_field :title, class: 'form-control', placeholder: "section title (optional)" %>
     <%= f.text_area :body, class: 'form-control', placeholder: "section body" %>
+    <span class="picture">
+      <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png', class: 'img-upload' %>
+    </span>
     <%= link_to_remove_association "remove", f, class: 'admin-links field-group' %>
   </div>
 </li>
