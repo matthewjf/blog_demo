@@ -1,12 +1,26 @@
 <li id="post-<% post.id %>">
-
-  <!-- insert image -->
-  <span class="h2 title"><%= link_to post.title, post %></span>
-  <span class="timestamp">
-    <%= post.created_at.to_date.to_formatted_s :long %>
-  </span>
-  <span class="preview">
-    <%= sanitize(post.body.truncate(250)) %>
-  <span>
-
+  <% if post.picture? %>
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-2">
+        <span class="h2 title"><%= link_to post.title, post %></span>
+        <span class="timestamp">
+          <%= post.created_at.to_date.to_formatted_s :long %>
+        </span>
+        <span class="preview">
+          <%= sanitize(post.body.truncate(250)) %>
+        <span>
+      </div>
+      <div class="col-sm-2 col-sm-offset-0">
+        <%= image_tag post.picture.url(:thumb) %>
+      </div>
+    </div>
+  <% else %>
+    <span class="h2 title"><%= link_to post.title, post %></span>
+    <span class="timestamp">
+      <%= post.created_at.to_date.to_formatted_s :long %>
+    </span>
+    <span class="preview">
+      <%= sanitize(post.body.truncate(250)) %>
+    <span>
+  <% end %>
 </li>

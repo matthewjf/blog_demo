@@ -8,6 +8,7 @@
   <%= f.text_area :body, class: 'form-control' %>
 
   <%= f.label :picture, 'Primary image' %>
+  <p><%= image_tag @post.picture.url if @post.picture?%></p>
   <span class="picture">
     <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png', class: 'field-group' %>
   </span>
