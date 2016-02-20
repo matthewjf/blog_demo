@@ -1,16 +1,23 @@
-<li id="post-<% post.id %>">
-  <span class="h2 title"><%= link_to post.title, post %></span>
-  <span class="timestamp">
-    <%= post.created_at.to_date.to_formatted_s :long %>
-  </span>
-  <div class="preview">
-    <% if post.picture? %>
-      <div class= "image">
+<li id="post-<% post.id %>", class="preview">
+  <div class="row">
+      <div class="<%= "col-sm-12 col-md-4" if post.picture? %>">
         <%= image_tag post.picture.url(:medium), class: "img" %>
       </div>
-    <% end %>
-    <div class="text">
-      <%= sanitize(post.body.truncate(300)) %>
-    </div>
+      <div class="<%= post.picture? ? "col-sm-12 col-md-8" : "container" %>">
+        <span class="h2 title"><%= link_to post.title, post %></span>
+        <span class="timestamp">
+          <%= post.created_at.to_date.to_formatted_s :long %>
+        </span>
+        <%= sanitize(post.body.truncate(300)) %>
+        <% if post.labels.any? %>
+          <div>
+            <%= 'Label'.pluralize(post.labels.count) %>:
+            <% post.labels.each do |label| %>
+              <%= link_to label.name, label %>
+            <% end %>
+          </div>
+        <% end %>
+        </span>
+      </div>
   </div>
 </li>
