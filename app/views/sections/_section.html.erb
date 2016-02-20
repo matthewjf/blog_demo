@@ -1,6 +1,6 @@
 <div class="section">
   <li id="section-<% section.id %>">
     <span class="h2 title"><%= section.title %></span>
-    <p><%= simple_format section.body %></p>
+    <p><%= section.body.html_safe %></p>
   </li>
 </div>
