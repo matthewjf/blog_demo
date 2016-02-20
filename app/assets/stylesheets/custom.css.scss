@@ -308,7 +308,7 @@ color: $gray-light !important;
     margin-top: 5em;
     padding-top: 0;
     a {
-      color:inherit;
+      color: inherit;
     }
   }
   .timestamp {
@@ -345,6 +345,9 @@ color: $gray-light !important;
   .post-header {
     margin-bottom: 15px;
   }
+  .body {
+    margin-bottom: 15px;
+  }
   .timestamp {
     color: $gray-light;
     display: block;
@@ -352,6 +355,7 @@ color: $gray-light !important;
   .section {
     margin-bottom: 15px;
     .title {
+      margin-top: 0px;
       margin-bottom: 15px;
     }
     .image {
