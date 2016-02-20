@@ -96,6 +96,7 @@ h2 {
 
 p {
   line-height: 1.4em;
+  // margin: 0;
 }
 
 /* header */
@@ -298,6 +299,9 @@ color: $gray-light !important;
   .title {
     margin-top: 5em;
     padding-top: 0;
+    a {
+      color:inherit;
+    }
   }
   .timestamp {
     color: $gray-light;
@@ -353,12 +357,15 @@ color: $gray-light !important;
     margin-bottom: 0px;
   }
   h3 {
-    margin: 10px 0;
+    margin: 15px 0;
   }
   .timestamp {
     margin-bottom: 5px;
   }
   ol {
     list-style: none;
+    li {
+      margin: 15px 0;
+    }
   }
 }

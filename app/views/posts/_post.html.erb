@@ -1,14 +1,13 @@
 <li id="post-<% post.id %>">
 
   <!-- insert image -->
-  <span class="h2 title"><%= post.title %></span>
+  <span class="h2 title"><%= link_to post.title, post %></span>
   <span class="timestamp">
     <%= post.created_at.to_date.to_formatted_s :long %>
   </span>
   <span class="preview">
     <% if post.sections.any? %>
       <%= sanitize(post.sections.first.body.truncate(250)) %>
-      <%= link_to 'more', post %>
     <% end %>
   <span>
 
