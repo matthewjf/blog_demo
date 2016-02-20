@@ -24,7 +24,7 @@ class PostsController < ApplicationController
       flash[:success] = "Post created"
       redirect_to @post
     else
-      render 'new'
+      render 'posts/new'
     end
   end
 
