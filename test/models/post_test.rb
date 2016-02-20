@@ -3,7 +3,7 @@ require 'test_helper'
 class PostTest < ActiveSupport::TestCase
   def setup
     @user = users(:rails)
-    @post = @user.posts.new(title: "Dolor")
+    @post = @user.posts.new(title: "Dolor", body: "lorem")
     @section = @post.sections.new(body: "Ipsum")
   end
 
