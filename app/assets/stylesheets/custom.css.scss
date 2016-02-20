@@ -251,9 +251,9 @@ input {
     -webkit-padding-start: none;
   }
   li {
+    border-bottom: 1px solid #e8e8e8;
     overflow: auto;
     padding: 10px 0;
-    border-bottom: 1px solid $gray-lighter;
   }
   .pagination {
     text-align: center;
@@ -294,10 +294,6 @@ color: $gray-light !important;
 .posts {
   list-style: none;
   padding: 0px;
-  li {
-    padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
-  }
   .title {
     margin-top: 5em;
     padding-top: 0;
@@ -310,16 +306,22 @@ color: $gray-light !important;
     display: block;
     margin-bottom: 1em;
   }
-  .preview {
+  li {
     display: flex;
     -webkit-flex-direction: row;
-    .image {
-    }
+    padding: 1.4em 0;
+    border-top: 1px solid #e8e8e8;
     .img {
       max-width: 100%;
     }
-    .text {
-      // width: 100%;
+    .labels {
+      padding: 0px;
+      a {
+        color: $gray-light;
+      }
+    }
+    .body {
+      margin-bottom: 1em;
     }
   }
 }
@@ -360,7 +362,6 @@ color: $gray-light !important;
   }
   .labels {
     color: $gray-light;
-    display: block;
     margin-bottom: 5px;
   }
   .image {
@@ -373,8 +374,8 @@ color: $gray-light !important;
 .labels {
   list-style: none;
   padding-bottom: 15px;
-  border-bottom: 1px solid $gray-medium-light;
   li {
+    border-bottom: 1px solid #e8e8e8;
     padding: 10px 0;
   }
 }
