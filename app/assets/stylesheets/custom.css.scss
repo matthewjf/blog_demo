@@ -271,19 +271,19 @@ input {
 .admin-links {
 }
 
-input::-webkit-input-placeholder {
+::-webkit-input-placeholder {
 color: $gray-light !important;
 }
 
-input:-moz-placeholder { /* Firefox 18- */
+::-moz-placeholder { /* Firefox 18- */
+color: $gray-light !important;
+}b
+
+:-moz-placeholder {  /* Firefox 19+ */
 color: $gray-light !important;
 }
 
-input::-moz-placeholder {  /* Firefox 19+ */
-color: $gray-light !important;
-}
-
-input:-ms-input-placeholder {
+:-ms-input-placeholder {
 color: $gray-light !important;
 }
 
@@ -351,7 +351,6 @@ color: $gray-light !important;
 /* comments */
 
 .comments {
-  max-width: 1000px;
   margin-top: 15px;
   h4 {
     margin-bottom: 0px;

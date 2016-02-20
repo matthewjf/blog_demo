@@ -4,10 +4,13 @@
 <div class="pagination">
   <%= will_paginate %>
 </div>
-
-<ul class="users">
-  <%= render @users %>
-</ul>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <ul class="users">
+      <%= render @users %>
+    </ul>
+  </div>
+</div>
 
 <div class="pagination">
   <%= will_paginate %>
