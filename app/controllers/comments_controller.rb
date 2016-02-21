@@ -8,14 +8,15 @@ class CommentsController < ApplicationController
 
   def create
     @post = Post.find(params[:post_id])
-    @comment = @post.comments.create(comment_params)
+    @comment = @post.comments.build(comment_params)
     @comment.user_id = current_user.id
     if @comment.save
       flash[:success] = "Comment added"
       redirect_to @post
     else
-      flash[:danger] = "Comment can't be empty"
-      redirect_to @post
+      @sections = @post.sections
+      @comments = @post.comments.paginate(page: params[:page])
+      render 'posts/show' # todo: autoscroll to comment form
     end
   end
 

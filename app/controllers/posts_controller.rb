@@ -10,7 +10,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @sections = @post.sections
     @comments = @post.comments.paginate(page: params[:page])
-    @comment = @post.comments.new
+    @comment = @post.comments.build
   end
 
   def new
@@ -21,7 +21,7 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(post_params)
     if @post.save
       flash[:success] = "Post created"
-      redirect_to @post
+      redirect_to post_path(@post, :anchor => "comments")
     else
       render 'posts/new'
     end

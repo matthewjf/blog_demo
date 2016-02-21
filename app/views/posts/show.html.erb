@@ -7,26 +7,31 @@
     <% end %>
   </div>
 
-  <span>
-    <% if @post.picture? %>
-      <%= image_tag @post.picture.url, class: "image" %>
-    <% end %>
-  </span>
-  <div class="post-header">
-    <h1><%= @post.title %></h1>
-    <span class="timestamp">
-      <%= @post.created_at.to_date.to_formatted_s :long %>
-    </span>
-  </div>
-  <div class="body"><%= @post.body.html_safe %></div>
-
-  <div class="sections"><%= render 'shared/sections' %></div>
-  <div class="labels"><%= render 'shared/labels' %></div>
-
-  <div class="row comments">
-    <div class="col-md-6 col-lg-offset-1">
-      <%= render 'shared/comments' %>
-      <%= render partial: 'comments/form' %>
+  <div class="row">
+    <div class="col-md-11 col-lg-10 centered">
+      <% if @post.picture? %>
+        <%= image_tag @post.picture.url, class: "image" %>
+      <% end %>
     </div>
   </div>
+  <div class="row">
+    <div class="col-sm-11 col-md-10 col-lg-9 centered">
+    <div class="post-header">
+      <h1><%= @post.title %></h1>
+      <span class="timestamp">
+        <%= @post.created_at.to_date.to_formatted_s :long %>
+      </span>
+    </div>
+    <div class="body"><%= @post.body.html_safe %></div>
+
+    <div class="sections"><%= render 'shared/sections' %></div>
+    <div class="labels"><%= render 'shared/labels' %></div>
+  </div>
+  </div>
+
+  <div class="comments centered">
+    <%= render 'shared/comments' %>
+    <%= render partial: 'comments/form' %>
+  </div>
+
 </div>

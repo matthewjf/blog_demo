@@ -19,6 +19,9 @@ $amount: 8%;
   margin: 0;
   padding: 0;
 }
+.row {
+  margin: 0;
+}
 
 /* universal */
 
@@ -74,6 +77,42 @@ textarea {
   border-radius: 3px;
 }
 
+.text-md-right {
+  text-align: left;
+}
+.text-md-center {
+  text-align: left;
+}
+@media (min-width: 992px) {
+  .text-md-right {
+    text-align: right;
+  }
+  .text-md-center {
+    text-align: center;
+  }
+}
+
+.text-sm-right {
+  text-align: left;
+}
+.text-sm-center {
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .text-sm-right {
+    text-align: right;
+  }
+  .text-sm-center {
+    text-align: center;
+  }
+}
+
+
+.centered{
+    float: none;
+    margin: 0 auto;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -98,7 +137,6 @@ h2 {
 
 p {
   line-height: 1.4em;
-  // margin: 0;
 }
 
 /* header */
@@ -309,7 +347,7 @@ color: $gray-light !important;
   li {
     display: flex;
     -webkit-flex-direction: row;
-    padding: 1.4em 0;
+    padding: 2em 0;
     border-top: 1px solid #e8e8e8;
     .img {
       max-width: 100%;
@@ -340,20 +378,22 @@ color: $gray-light !important;
     margin-bottom: 15px;
   }
   .body {
-    margin-bottom: 15px;
+    margin-bottom: 1.4em;
   }
   .timestamp {
     color: $gray-light;
     display: block;
   }
   .section {
-    margin-bottom: 15px;
+    margin-bottom: 1.4em;
     .title {
       margin-top: 0px;
       margin-bottom: 15px;
     }
     .image {
       margin-bottom: 15px;
+      margin-left: auto;
+      margin-right: auto;
       .img {
         width: 80%;
         margin: auto;
@@ -362,7 +402,7 @@ color: $gray-light !important;
   }
   .labels {
     color: $gray-light;
-    margin-bottom: 5px;
+    padding: 15px 0;
   }
   .image {
     width: 100%;
@@ -384,19 +424,36 @@ color: $gray-light !important;
 
 .comments {
   margin-top: 15px;
+  list-style: none;
+  max-width: 100%;
+  word-wrap: break-word;
+  .author {
+    color: green;
+  }
+  .centered {
+    padding: 0;
+  }
+  .row {
+    padding: 0px;
+    width: 100%;
+    height: auto;
+    .row {
+      border-bottom: 1px solid #e8e8e8;
+      margin: 0;
+      padding: 1.4rem 0px;
+      p {
+        margin: 0;
+      }
+    }
+  }
   h4 {
     margin-bottom: 0px;
   }
   h3 {
     margin: 15px 0;
   }
-  .timestamp {
-    margin-bottom: 5px;
-  }
-  ol {
-    list-style: none;
-    li {
-      margin: 15px 0;
-    }
+  li {
+    -webkit-flex-direction: row;
+    display: flex;
   }
 }

@@ -1,12 +1,16 @@
 <%= form_for [ @post, @comment ] do |f| %>
-  <%= render 'shared/error_messages', object: f.object %>
-  <span class="comment">
-    <p>
-      <%= f.label :body, 'Post a comment' %><br/>
-      <%= f.text_area :body, class: 'form-control field-group' %>
-    </p>
-    <p>
-      <%= f.submit 'Submit', class: "btn btn-primary" %>
-    </p>
-  </span>
+<div class="row">
+  <div class="col-md-6 col-sm-8 col-lg-5 centered">
+    <%= render 'shared/error_messages', object: f.object %>
+    <div class="comment">
+      <span>
+        <%= f.label :body, 'Post a comment' %><br/>
+        <%= f.text_area :body, rows: 3, class: 'form-control field-group' %>
+      </span>
+      <span>
+        <%= f.submit 'Submit', class: "btn btn-primary" %>
+      </span>
+    </div>
+  </div>
+</div>
 <% end %>
