@@ -9,11 +9,11 @@
     <%= f.text_area :body, rows: 5, class: "textarea form-control" %>
 
     <%= f.label :picture, 'Primary image' %>
-    <span>
+    <div>
       <% if @post.picture? %>
-        <%= image_tag @post.picture.url, class: "image" %>
+        <%= image_tag @post.picture.url(:medium), class: "img" %>
       <% end %>
-    </span>
+    </div>
     <span class="picture">
       <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png', class: 'field-group' %>
     </span>
