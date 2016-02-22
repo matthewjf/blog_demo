@@ -27,6 +27,12 @@ $amount: 8%;
 
 body {
   padding-top: 60px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+label {
+  font-weight: normal;
 }
 
 .control-group {
@@ -75,6 +81,7 @@ textarea {
 .form-control {
   box-shadow: none !important;
   border-radius: 3px;
+  font-size: inherit;
 }
 
 .text-md-right {
@@ -159,8 +166,9 @@ p {
   color: $primary;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
   font-weight: bold;
+  height: auto;
+  padding-top: 6px;
   &:hover {
     color: lighten($primary, $amount);
     text-decoration: none;
@@ -176,11 +184,15 @@ p {
     float: right;
     li {
       float: left;
+      font-weight: normal;
     }
   }
   .dropdown-menu {
     li {
       float: none !important;
+      a {
+        font-weight: normal;
+      }
     }
   }
 }
@@ -371,7 +383,7 @@ color: $gray-light !important;
   .timestamp {
     color: $gray-light;
     display: block;
-    margin-bottom: 1em;
+    padding-bottom: 10px;
   }
   li {
     display: flex;

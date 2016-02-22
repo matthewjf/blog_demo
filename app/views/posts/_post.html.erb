@@ -1,15 +1,15 @@
 <li id="post-<% post.id %>">
   <div class="row-fluid">
-    <div class="<%= "col-sm-5 col-md-4" if post.picture? %>">
+    <div class="<%= "col-sm-5" if post.picture? %>">
       <%= link_to image_tag(post.picture.url(:medium), class: "img"), post %>
     </div>
-    <div class="<%= post.picture? ? "col-sm-7 col-md-8" : "col-sm-12" %>">
+    <div class="<%= post.picture? ? "col-sm-7" : "col-sm-12" %>">
       <span class="h2 title"><%= link_to post.title, post %></span>
       <span class="timestamp">
         <%= post.created_at.to_date.to_formatted_s :long %>
       </span>
         <div class="body">
-          <%= sanitize(post.body.truncate(300)) %>
+          <%= sanitize(post.body.truncate(200)) %>
         </div>
         <% if post.labels.any? %>
           <span class="labels">
