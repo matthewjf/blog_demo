@@ -126,6 +126,15 @@ h1 {
   text-align: center;
 }
 
+.jumbotron {
+  h1 {
+    color: white;
+  }
+  h2 {
+    color: #ccc;
+  }
+}
+
 h2 {
   font-size: 1.2em;
   letter-spacing: -1px;
@@ -197,6 +206,13 @@ footer {
   }
 }
 
+/* welcome */
+
+.background_image {
+  background: image-url('welcome-background.jpg');
+  background-size: 100% auto;
+  margin: -10px -15px 0;
+}
 /* sidebar */
 
 aside {
@@ -349,6 +365,9 @@ color: $gray-light !important;
     -webkit-flex-direction: row;
     padding: 2em 0;
     border-top: 1px solid #e8e8e8;
+    &:nth-child(1) {
+      border-top: none;
+    };
     .img {
       max-width: 100%;
     }
@@ -395,7 +414,7 @@ color: $gray-light !important;
       margin-left: auto;
       margin-right: auto;
       .img {
-        width: 80%;
+        width: 100%;
         margin: auto;
       }
     }
@@ -403,6 +422,9 @@ color: $gray-light !important;
   .labels {
     color: $gray-light;
     padding: 15px 0;
+  }
+  .float-right {
+    float: right;
   }
   .image {
     width: 100%;
@@ -423,7 +445,6 @@ color: $gray-light !important;
 /* comments */
 
 .comments {
-  margin-top: 15px;
   list-style: none;
   max-width: 100%;
   word-wrap: break-word;
@@ -450,7 +471,7 @@ color: $gray-light !important;
     margin-bottom: 0px;
   }
   h3 {
-    margin: 15px 0;
+    margin: 1.4em 0;
   }
   li {
     -webkit-flex-direction: row;

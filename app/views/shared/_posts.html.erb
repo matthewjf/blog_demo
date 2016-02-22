@@ -1,7 +1,11 @@
 <% if @posts.any? %>
-  <ol class="posts">
-    <%= render @posts %>
-  </ol>
+<div class="row-fluid">
+  <div class="col-md-10 col-lg-9 col-sm-11 centered">
+    <ol class="posts">
+      <%= render @posts %>
+    </ol>
+  </div>
+</div>
 
   <div class="pagination">
     <%= will_paginate @posts %>

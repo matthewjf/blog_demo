@@ -8,14 +8,14 @@
   </div>
 
   <div class="row">
-    <div class="col-md-11 col-lg-10 centered">
+    <div class="col-sm-10 col-md-9 col-lg-8 centered">
       <% if @post.picture? %>
         <%= image_tag @post.picture.url, class: "image" %>
       <% end %>
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-11 col-md-10 col-lg-9 centered">
+    <div class="col-sm-9 col-md-8 col-lg-7 centered">
     <div class="post-header">
       <h1><%= @post.title %></h1>
       <span class="timestamp">
@@ -25,7 +25,8 @@
     <div class="body"><%= @post.body.html_safe %></div>
 
     <div class="sections"><%= render 'shared/sections' %></div>
-    <div class="labels"><%= render 'shared/labels' %></div>
+    <span class="labels"><%= render 'shared/labels' %></span>
+    <span class="float-right"><%= link_to "back to posts", root_url %></span>
   </div>
   </div>
 

@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :admin_user, except: [:index, :show]
   before_action :logged_in_user, except: [:index, :show]
+  before_action :correct_user, only: [:edit, :update]
 
   def index
     @posts = Post.paginate(page: params[:page])
@@ -51,5 +52,10 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :body, :picture, :label_list,
             sections_attributes: [:id, :title, :body, :picture, :_destroy])
+    end
+
+    def correct_user
+      @post = current_user.posts.find_by(id: params[:id])
+      redirect_to root_url if @post.nil?
     end
 end
