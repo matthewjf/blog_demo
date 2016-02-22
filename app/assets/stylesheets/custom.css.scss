@@ -131,7 +131,9 @@ h1 {
     color: white;
   }
   h2 {
-    color: #ccc;
+    font-size: 18px;
+    font-weight: normal;
+    color: white;
   }
 }
 
@@ -209,7 +211,10 @@ footer {
 /* welcome */
 
 .background_image {
-  background: image-url('welcome-background.jpg');
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), image-url('welcome-background.jpg');
   background-size: 100% auto;
   margin: -10px -15px 0;
 }
