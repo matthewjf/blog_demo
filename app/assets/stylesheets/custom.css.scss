@@ -167,6 +167,10 @@ p {
   }
 }
 
+.navbar {
+  border-bottom: 1px solid darken(#222, $amount);
+}
+
 .navbar-right {
   ul {
     float: right;
@@ -212,8 +216,8 @@ footer {
 
 .background_image {
   background: linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
     ), image-url('welcome-background.jpg');
   background-size: 100% auto;
   margin: -10px -15px 0;
@@ -358,6 +362,10 @@ color: $gray-light !important;
     padding-top: 0;
     a {
       color: inherit;
+      &:hover {
+        text-decoration: none;
+        color: #428bca;
+      }
     }
   }
   .timestamp {
@@ -383,7 +391,7 @@ color: $gray-light !important;
       }
     }
     .body {
-      margin-bottom: 1em;
+      margin-bottom: 10px;
     }
   }
 }
@@ -431,8 +439,14 @@ color: $gray-light !important;
   .float-right {
     float: right;
   }
-  .image {
-    width: 100%;
+  .image-container {
+    max-width: 768px;
+    .image {
+      width: 100%;
+    }
+  }
+  .post-body {
+    max-width: 660px;
   }
 }
 
@@ -451,13 +465,19 @@ color: $gray-light !important;
 
 .comments {
   list-style: none;
-  max-width: 100%;
+  max-width: 500px;
   word-wrap: break-word;
   .author {
     color: green;
   }
+  .comment-form {
+    max-width: 400px;
+  }
   .centered {
     padding: 0;
+  }
+  .timestamp {
+    color: $gray-light;
   }
   .row {
     padding: 0px;

@@ -8,14 +8,16 @@
       <span class="timestamp">
         <%= post.created_at.to_date.to_formatted_s :long %>
       </span>
-      <div class="body"><%= sanitize(post.body.truncate(300)) %></div>
-      <% if post.labels.any? %>
-        <div class="labels">
-          <% post.labels.each do |label| %>
-            <%= link_to label.name, label %>
-          <% end %>
+        <div class="body">
+          <%= sanitize(post.body.truncate(300)) %>
         </div>
-      <% end %>
+        <% if post.labels.any? %>
+          <span class="labels">
+            <% post.labels.each do |label| %>
+              <%= link_to label.name, label %>
+            <% end %>
+          </span>
+        <% end %>
       </span>
     </div>
   </div>

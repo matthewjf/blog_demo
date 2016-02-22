@@ -5,13 +5,9 @@
 </div>
 
 <% if @comments.any? %>
-<div class="row-fluid">
-  <div class="col-sm-8 col-md-7 col-lg-6 centered">
   <ol>
     <%= render @comments %>
   </ol>
-</div>
-</div>
 
   <div class="pagination">
     <%= will_paginate @comments %>

@@ -7,15 +7,12 @@
     <% end %>
   </div>
 
-  <div class="row">
-    <div class="col-sm-10 col-md-9 col-lg-8 centered">
-      <% if @post.picture? %>
-        <%= image_tag @post.picture.url, class: "image" %>
-      <% end %>
-    </div>
+  <div class="image-container centered">
+    <% if @post.picture? %>
+      <%= image_tag @post.picture.url, class: "image" %>
+    <% end %>
   </div>
-  <div class="row">
-    <div class="col-sm-9 col-md-8 col-lg-7 centered">
+  <div class="post-body centered">
     <div class="post-header">
       <h1><%= @post.title %></h1>
       <span class="timestamp">
@@ -28,11 +25,9 @@
     <span class="labels"><%= render 'shared/labels' %></span>
     <span class="float-right"><%= link_to "back to posts", root_url %></span>
   </div>
-  </div>
+</div>
 
-  <div class="comments centered">
-    <%= render 'shared/comments' %>
-    <%= render partial: 'comments/form' %>
-  </div>
-
+<div class="comments centered">
+  <%= render 'shared/comments' %>
+  <%= render partial: 'comments/form' %>
 </div>
