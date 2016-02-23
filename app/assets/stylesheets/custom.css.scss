@@ -183,7 +183,7 @@ h1 {
     color: white;
   }
   h2 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: normal;
     color: white;
   }
@@ -471,7 +471,7 @@ color: $gray-Light !important;
     display: block;
   }
   .section {
-    margin-bottom: 1.4em;
+    margin-bottom: 1em;
     .title {
       margin-top: 0px;
       margin-bottom: 16px;
@@ -488,7 +488,7 @@ color: $gray-Light !important;
     }
   }
   .labels {
-    padding: 1em 0;
+    margin: 1.4em 0px;
   }
   .float-right {
     float: right;
@@ -501,6 +501,11 @@ color: $gray-Light !important;
   }
   .post-body {
     max-width: 660px;
+  }
+  li {
+    &:last-child {
+      padding-bottom: .5em;
+    }
   }
 }
 
