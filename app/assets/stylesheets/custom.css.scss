@@ -186,7 +186,6 @@ h1 {
   }
   h2 {
     font-size: 20px;
-    font-weight: normal;
     color: white;
   }
 }
@@ -196,7 +195,6 @@ h2 {
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
-  font-weight: normal;
   color: $gray-Light;
 }
 
@@ -230,15 +228,11 @@ h2 {
     float: right;
     li {
       float: left;
-      font-weight: normal;
     }
   }
   .dropdown-menu {
     li {
       float: none !important;
-      a {
-        font-weight: normal;
-      }
     }
   }
 }
@@ -363,7 +357,6 @@ input {
   margin-bottom: 10px;
   span {
     margin-left: 20px;
-    font-weight: normal;
   }
 }
 
