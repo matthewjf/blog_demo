@@ -275,7 +275,12 @@ footer {
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)
     ), image-url('welcome-background.jpg');
-  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   margin: -10px -15px 0;
 }
 /* sidebar */
