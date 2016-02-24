@@ -17,6 +17,8 @@ gem 'turbolinks',               '2.3.0'
 gem 'jbuilder',                 '2.2.3'
 gem 'sdoc',                     '0.4.0', group: :doc
 gem 'cocoon'
+gem 'autosize-rails'
+gem 'jquery-turbolinks'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

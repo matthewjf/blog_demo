@@ -3,6 +3,9 @@
     <%= f.label :section %>
     <%= f.text_field :title, class: 'form-control', placeholder: "section title (optional)" %>
     <%= f.text_area :body, rows: 5, class: 'textarea form-control', placeholder: "section body" %>
+    <% if f.object.picture? %>
+      <%= image_tag f.object.picture.url(:medium), class: "img" %>
+    <% end %>
     <span class="picture">
       <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png', class: 'img-upload' %>
     </span>

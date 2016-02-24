@@ -12,7 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require jquery.turbolinks
 //= require_tree .
 //= require bootstrap
 //= require cocoon
+//= require jquery.autosize
+//= require turbolinks
+
+$(document).ready(function(){
+  $('textarea').autosize();
+  $(document).on('cocoon:after-insert', function() {
+    $('textarea').autosize();
+  });
+});
