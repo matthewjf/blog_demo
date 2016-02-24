@@ -73,6 +73,16 @@ $amount: 8%;
 
 /* universal */
 
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}
+
 body {
   padding-top: 60px;
   font-size: 16px;
@@ -249,7 +259,9 @@ h2 {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $gray-medium-Light;
+  padding: 0;
+  width: 100%;
+  background-color: $gray-medium-Light;
   color: $gray-Light;
   a {
     color: $gray;
@@ -263,6 +275,8 @@ footer {
   ul {
     float: right;
     list-style: none;
+    line-height: 1;
+    margin: 1em 0;
     li {
       float: left;
       margin-left: 15px;
@@ -395,7 +409,6 @@ input {
   clear: both;
   float: left;
   width: 100%;
-  margin-top: 45px;
   @include box_sizing;
 }
 
