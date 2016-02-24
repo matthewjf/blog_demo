@@ -64,27 +64,27 @@ $amount: 8%;
 /* reset stylesheets */
 
 * {
-  margin: 0;
-  padding: 0;
+  // margin: 0;
+  // padding: 0;
 }
 .row {
-  margin: 0;
+  // margin: 0;
 }
 
 /* universal */
 
 .Site {
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
   flex-direction: column;
 }
 
 .Site-content {
+  margin-top: 65px;
   flex: 1;
 }
 
 body {
-  padding-top: 60px;
   font-size: 16px;
   font-family: 'OpenSans', Helvetica, sans-serif;
   color: #444;
@@ -197,6 +197,7 @@ h1 {
 }
 
 .jumbotron {
+  padding: 45px;
   h1 {
     color: white;
   }
@@ -224,7 +225,6 @@ h2 {
   text-transform: uppercase;
   letter-spacing: -1px;
   font-weight: bold;
-  height: auto;
   padding-top: 6px;
   &:hover {
     color: lighten($primary, $amount);
@@ -297,7 +297,7 @@ footer {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  margin: -10px -15px 0;
+  margin-top: -15px;
 }
 /* sidebar */
 
@@ -391,7 +391,7 @@ input {
   list-style: none;
   margin: 0;
   ul {
-    -webkit-padding-start: none;
+    -webkit-padding-start: 0;
   }
   li {
     border-bottom: 1px solid #e8e8e8;
@@ -409,6 +409,7 @@ input {
   clear: both;
   float: left;
   width: 100%;
+  overflow: visible;
   @include box_sizing;
 }
 
@@ -519,6 +520,9 @@ color: $gray-Light !important;
   }
   .post-body {
     max-width: 660px;
+  }
+  ul {
+    -webkit-padding-start: 0;
   }
   li {
     &:last-child {
