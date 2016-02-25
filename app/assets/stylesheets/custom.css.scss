@@ -472,6 +472,10 @@ color: $gray-Light !important;
     .body {
       padding-bottom:16px;
     }
+    @media (max-width: 768px)  {
+      max-width: 500px;
+      margin: auto;
+    }
   }
 }
 
