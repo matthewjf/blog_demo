@@ -20,6 +20,14 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    @post = Post.find(params[:post_id])
+    @post.comments.find(params[:id]).destroy
+    flash[:success] = "Comment deleted"
+    redirect_to root_url
+  end
+
+
   private
     def comment_params
       params.require(:comment).permit(:body)
