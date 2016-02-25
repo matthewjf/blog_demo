@@ -4,7 +4,11 @@
 /* mixins, variables, etc. */
 $gray-medium-Light: #eaeaea;
 $gray-Light: #888888;
-$primary: hsl(215, 75%,  58%);
+$yellow-light: hsl(51, 90%, 87%);
+$red: #d74d2f;
+$blue: hsl(215, 75%,  58%);
+
+$primary: $red;
 $amount: 8%;
 
 @mixin box_sizing {
@@ -80,7 +84,6 @@ $amount: 8%;
 }
 
 .Site-content {
-  margin-top: 65px;
   flex: 1;
   padding: 0 15px;
 }
@@ -221,12 +224,12 @@ h2 {
 #logo {
   float: left;
   margin-right: 1rem;
-  font-size: 1.7em;
+  font-size: 2em;
   color: $primary;
   text-transform: uppercase;
   letter-spacing: -1px;
   font-weight: bold;
-  padding-top: 6px;
+  padding-top: 3px;
   &:hover {
     color: lighten($primary, $amount);
     text-decoration: none;
@@ -238,6 +241,7 @@ h2 {
 
 .navbar {
   border-bottom: 1px solid darken(#222, $amount);
+  position: relative;
 }
 
 .navbar-right {
@@ -298,7 +302,7 @@ footer {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  margin: -15px -15px 0;
+  margin: -20px -15px 0;
 }
 /* sidebar */
 
@@ -486,6 +490,7 @@ color: $gray-Light !important;
   }
   .body {
     margin-bottom: 2em;
+    text-overflow: ellipsis;
   }
   .timestamp {
     color: $gray-Light;
@@ -543,18 +548,19 @@ color: $gray-Light !important;
   }
   a {
     color: $gray;
-    padding: 3px;
+    padding: 5px;
     border: none;
     border-radius: 1px;
-    background-color: #eee;
+    background-color: $yellow-light;
+    font-size: 14px;
     &:hover {
       text-decoration: none;
-      background-color: darken(#eee, $amount);
+      background-color: darken($yellow-light, $amount);
       color: darken($gray, $amount);
     }
     &:active {
       text-decoration: none;
-      background-color: darken(#eee, 2 * $amount);
+      background-color: darken($yellow-light, 2 * $amount);
       color: darken($gray, 2 * $amount);
     }
     &:focus {
