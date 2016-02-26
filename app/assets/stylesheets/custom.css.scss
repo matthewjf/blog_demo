@@ -475,6 +475,9 @@ color: $gray-Light !important;
     .body {
       padding-bottom:16px;
     }
+    .row-fluid {
+      width: 100%;
+    }
     @media (max-width: 768px)  {
       max-width: 500px;
       margin: auto;
