@@ -92,7 +92,7 @@ $amount: 8%;
 
 .Site-content {
   flex: 1;
-  padding: 0 15px;
+  padding: 65px 15px 0;
 }
 
 body {
@@ -237,7 +237,6 @@ h2 {
 
 .navbar {
   border-bottom: none;
-  position: relative;
 }
 
 .navbar-right {
@@ -288,16 +287,8 @@ footer {
 /* welcome */
 
 .welcome {
-  @include background_cover;
-  background-image:
-    linear-gradient(
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-    ),
-    image-url('welcome-background.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  margin: -20px -15px 0;
+  background-color: #222;
+  margin: -15px -15px 0;
   display: flex;
   justify-content: center;
   align-items: center;
