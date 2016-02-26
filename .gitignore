@@ -8,7 +8,6 @@ capybara-*.html
 /public/system
 /coverage/
 /spec/tmp
-/public/uploads
 **.orig
 rerun.txt
 pickle-email-*.html
@@ -37,3 +36,9 @@ bower.json
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore application configuration
+/config/application.yml
+
+# Ignore uploaded test images.
+/public/uploads
