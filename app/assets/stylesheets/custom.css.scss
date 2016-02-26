@@ -17,6 +17,13 @@ $amount: 8%;
   box-sizing: border-box;
 }
 
+@mixin background_cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 @font-face {
     font-family: 'OpenSans';
     src: font-url('OpenSans-Regular.ttf') format('truetype');
@@ -200,17 +207,6 @@ h1 {
   text-align: center;
 }
 
-.jumbotron {
-  padding: 45px;
-  h1 {
-    color: white;
-  }
-  h2 {
-    font-size: 20px;
-    color: white;
-  }
-}
-
 h2 {
   font-size: 1.2em;
   letter-spacing: -1px;
@@ -291,18 +287,35 @@ footer {
 
 /* welcome */
 
-.background_image {
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ), image-url('welcome-background.jpg');
+.welcome {
+  @include background_cover;
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    image-url('welcome-background.jpg');
   background-repeat: no-repeat;
   background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   margin: -20px -15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  .content {
+    width: 100%;
+    padding: 30px;
+  }
+}
+
+.jumbotron {
+  h1 {
+    color: white;
+  }
+  h2 {
+    font-weight: normal;
+    color: white;
+  }
 }
 /* sidebar */
 

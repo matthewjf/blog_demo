@@ -2,8 +2,7 @@
 <% provide(:button_text, 'Create your account') %>
 <h1>Sign up</h1>
 
-<div class="row">
-  <div class="col-md-6 col-sm-8 col-lg-5 centered">
-    <%= render 'form' %>
-  </div>
+<div class="form centered">
+  <%= render 'form' %>
+  <p>Already have an account? <%= link_to "Log in", login_path %></p>
 </div>

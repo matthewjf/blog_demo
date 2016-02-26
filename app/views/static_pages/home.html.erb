@@ -1,11 +1,13 @@
-<div class="center jumbotron background_image">
-  <h1>Welcome to Rig</h1>
-
-  <h2>
-    A blog about building things, coffee, the outdoors and more
-  </h2>
-
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+<div class="jumbotron welcome">
+  <div class="content">
+    <h1>Welcome to Rig</h1>
+    <h2>A blog about things</h2>
+    <% unless logged_in? %>
+      <div class="center">
+        <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+      </div>
+    <% end %>
+  </div>
 </div>
 
 <% if logged_in? && current_user.admin? %>
