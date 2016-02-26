@@ -122,7 +122,7 @@ textarea {
 }
 
 .btn {
-  border: none;
+  border: 1px solid darken($primary, $amount);
   text-decoration: none;
   border-radius: 3px;
   outline: none !important;
@@ -262,6 +262,7 @@ h2 {
 /* footer */
 
 footer {
+  margin-top: 60px;
   padding-top: 5px;
   padding: 0;
   width: 100%;
@@ -445,7 +446,7 @@ color: $gray-Light !important;
       color: inherit;
       &:hover {
         text-decoration: none;
-        color: #428bca;
+        color: $primary;
       }
     }
   }

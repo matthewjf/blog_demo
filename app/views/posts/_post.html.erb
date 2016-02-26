@@ -15,7 +15,7 @@
         <% if post.labels.any? %>
           <span class="labels">
             <% post.labels.each do |label| %>
-              <%= link_to label.name, label %>
+              <%= link_to label.name, label, class: "btn" %>
             <% end %>
           </span>
         <% end %>
