@@ -14,10 +14,12 @@
         <%= image_tag @post.picture.url(:medium), class: "img" %>
       </div>
     <% end %>
+    <%= f.text_field :picture_caption,
+          placeholder: "image caption (optional)",
+          class: 'form-control'%>
     <span class="picture">
       <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png', class: 'field-group' %>
     </span>
-
     <div class="section">
       <%= f.fields_for :sections do |section| %>
         <div>

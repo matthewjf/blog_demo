@@ -7,6 +7,7 @@
       <% if section.picture? %>
         <figure class="image">
           <%= image_tag section.picture.url, class: "img" %>
+          <figcaption class="text-center"><%= section.picture_caption %></figcaption>
         </figure>
       <% end %>
       <%= simple_format(h section.body.html_safe)  %>

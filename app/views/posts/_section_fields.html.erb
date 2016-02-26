@@ -6,6 +6,9 @@
     <% if f.object.picture? %>
       <%= image_tag f.object.picture.url(:medium), class: "img" %>
     <% end %>
+    <%= f.text_field :picture_caption,
+          placeholder: "image caption (optional)",
+          class: 'form-control'%>
     <span class="picture">
       <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png', class: 'img-upload' %>
     </span>

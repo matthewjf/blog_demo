@@ -3,7 +3,7 @@
 
 /* mixins, variables, etc. */
 $gray-medium-Light: #eaeaea;
-$gray-Light: #888888;
+$gray-light: #888888;
 $yellow-light: hsl(51, 90%, 87%);
 $red: #d74d2f;
 $blue: hsl(215, 75%,  58%);
@@ -216,7 +216,7 @@ h2 {
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
-  color: $gray-Light;
+  color: $gray-light;
 }
 
 /* header */
@@ -267,7 +267,7 @@ footer {
   padding: 0;
   width: 100%;
   background-color: $gray-medium-Light;
-  color: $gray-Light;
+  color: $gray-light;
   a {
     color: $gray;
     &:hover {
@@ -419,19 +419,19 @@ input {
 }
 
 ::-webkit-input-placeholder {
-color: $gray-Light !important;
+color: $gray-light !important;
 }
 
 ::-moz-placeholder { /* Firefox 18- */
-color: $gray-Light !important;
+color: $gray-light !important;
 }b
 
 :-moz-placeholder {  /* Firefox 19+ */
-color: $gray-Light !important;
+color: $gray-light !important;
 }
 
 :-ms-input-placeholder {
-color: $gray-Light !important;
+color: $gray-light !important;
 }
 
 /* posts index */
@@ -451,7 +451,7 @@ color: $gray-Light !important;
     }
   }
   .timestamp {
-    color: $gray-Light;
+    color: $gray-light;
     display: block;
     padding-bottom: 16px;
   }
@@ -504,7 +504,7 @@ color: $gray-Light !important;
     padding-bottom: 1em;
   }
   .timestamp {
-    color: $gray-Light;
+    color: $gray-light;
     display: block;
   }
   .section {
@@ -521,6 +521,10 @@ color: $gray-Light !important;
         max-width: 100%;
         margin: auto;
       }
+      figcaption {
+        font-style: italic;
+        color: $gray-light;
+      }
     }
   }
   .labels {
@@ -533,6 +537,10 @@ color: $gray-Light !important;
     max-width: 768px;
     .image {
       max-width: 100%;
+    }
+    figcaption {
+      font-style: italic;
+      color: $gray-light;
     }
   }
   .post-body {
@@ -596,7 +604,7 @@ color: $gray-Light !important;
     padding: 0;
   }
   .timestamp {
-    color: $gray-Light;
+    color: $gray-light;
   }
   .row {
     padding: 0px;

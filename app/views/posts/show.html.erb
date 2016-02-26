@@ -10,6 +10,7 @@
   <figure class="image-container centered">
     <% if @post.picture? %>
       <%= image_tag @post.picture.url, class: "image" %>
+      <figcaption class="text-center"><%= @post.picture_caption %></figcaption>
     <% end %>
   </figure>
   <div class="post-body centered">
