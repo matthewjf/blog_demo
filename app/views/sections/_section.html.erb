@@ -9,7 +9,7 @@
           <%= image_tag section.picture.url, class: "img" %>
         </figure>
       <% end %>
-      <%= section.body.html_safe %>
+      <%= simple_format(h section.body.html_safe)  %>
     </div>
   </div>
 </li>
