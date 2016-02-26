@@ -5,9 +5,9 @@
     <% end %>
     <div>
       <% if section.picture? %>
-        <div class="image">
+        <figure class="image">
           <%= image_tag section.picture.url, class: "img" %>
-        </div>
+        </figure>
       <% end %>
       <%= section.body.html_safe %>
     </div>
