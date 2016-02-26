@@ -20,10 +20,11 @@
       </span>
     </div>
     <div class="body"><%= @post.body.html_safe %></div>
-
     <div class="sections"><%= render 'shared/sections' %></div>
-    <span class="labels"><%= render 'shared/labels' %></span>
-    <span class="float-right"><%= link_to "back to posts", root_url %></span>
+    <div class="centered">
+      <span class="labels"><%= render 'shared/labels' %></span>
+      <span class="float-right"><%= link_to "back to posts", root_url %></span>
+    </div>
   </div>
 </div>
 

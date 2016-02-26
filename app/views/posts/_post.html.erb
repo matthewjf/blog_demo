@@ -9,7 +9,8 @@
         <%= post.created_at.to_date.to_formatted_s :long %>
       </span>
         <div class="body">
-          <%= sanitize(post.body.truncate(200, separator: ' ')) %>
+          <%= sanitize(post.body.truncate(255, separator: '.')) %>
+          <%= link_to "read on", post %>
         </div>
         <% if post.labels.any? %>
           <span class="labels">

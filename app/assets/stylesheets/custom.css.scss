@@ -262,7 +262,6 @@ h2 {
 /* footer */
 
 footer {
-  margin-top: 45px;
   padding-top: 5px;
   padding: 0;
   width: 100%;
@@ -498,8 +497,10 @@ color: $gray-Light !important;
     margin-bottom: 1em;
   }
   .body {
-    margin-bottom: 2em;
-    text-overflow: ellipsis;
+    padding-bottom: 2em;
+  }
+  .post-body {
+    padding-bottom: 1em;
   }
   .timestamp {
     color: $gray-Light;
@@ -541,7 +542,7 @@ color: $gray-Light !important;
   }
   li {
     &:last-child {
-      padding-bottom: .5em;
+      padding-bottom: 1em;
     }
   }
 }
