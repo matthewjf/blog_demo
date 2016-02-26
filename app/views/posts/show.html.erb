@@ -9,7 +9,7 @@
 
   <figure class="image-container centered">
     <% if @post.picture? %>
-      <%= image_tag @post.picture.url, class: "image" %>
+      <%= link_to image_tag(@post.picture.url, class: "image"), @post.picture.url %>
       <figcaption class="text-center"><%= @post.picture_caption %></figcaption>
     <% end %>
   </figure>

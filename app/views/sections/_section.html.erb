@@ -6,7 +6,7 @@
     <div>
       <% if section.picture? %>
         <figure class="image">
-          <%= image_tag section.picture.url, class: "img" %>
+          <%= link_to image_tag(section.picture.url, class: "img"), section.picture.url %>
           <figcaption class="text-center"><%= section.picture_caption %></figcaption>
         </figure>
       <% end %>
