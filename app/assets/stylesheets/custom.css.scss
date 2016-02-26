@@ -456,15 +456,14 @@ color: $gray-Light !important;
     padding-bottom: 16px;
   }
   li {
+    max-width: 1270px;
+    margin:auto;
     display: flex;
     -webkit-flex-direction: row;
     padding: 2em 0;
     border-top: 1px solid #e8e8e8;
     &:nth-child(1) {
       border-top: none;
-    }
-    figure {
-      text-align: center;
     }
     .img {
       max-width: 100%;
