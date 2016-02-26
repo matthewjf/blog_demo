@@ -1,6 +1,5 @@
 <li id="comment-<% comment.id %>">
-  <div class="row">
-    <div class="row comment">
+  <div class="row-fluid">
       <div class="text-sm-right col-sm-4">
         <div class="author"><%= User.find_by(comment.user_id).name %></div>
         <div class="timestamp">
@@ -10,6 +9,5 @@
       <div class="col-sm-8">
         <%= simple_format comment.body %>
       </div>
-    </div>
   </div>
 </li>

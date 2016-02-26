@@ -10,6 +10,7 @@ $blue: hsl(215, 75%,  58%);
 $primary: $red;
 $amount: 8%;
 $border-color: #e8e8e8;
+$label-background: hsl(0, 0%, 98%);
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -81,6 +82,10 @@ $border-color: #e8e8e8;
 .row {
   margin: 0;
 }
+li {
+  -webkit-padding-start: 0;
+}
+
 
 /* universal */
 
@@ -494,6 +499,7 @@ color: $gray-light !important;
 
 .post {
   list-style: none;
+  margin-bottom: 60px;
   h1 {
     font-size: 3em;
     letter-spacing: -2px;
@@ -575,19 +581,21 @@ color: $gray-light !important;
     color: $gray;
     padding: 5px 8px;
     margin-right: 2px;
-    border: none;
-    border-radius: 1px;
-    background-color: $yellow-light;
+    border: 1px solid $border-color;
+    border-radius: 3px;
+    background-color: $label-background;
     font-size: 14px;
     &:hover {
       text-decoration: none;
-      background-color: darken($yellow-light, $amount);
+      background-color: darken($label-background, $amount);
       color: darken($gray, $amount);
+      border-color: darken($border-color, $amount);
     }
     &:active {
       text-decoration: none;
-      background-color: darken($yellow-light, 2 * $amount);
+      background-color: darken($label-background, 2 * $amount);
       color: darken($gray, 2 * $amount);
+      border-color: darken($border-color, 2 * $amount)
     }
     &:focus {
       text-decoration: none;
@@ -599,7 +607,6 @@ color: $gray-light !important;
 
 .comments {
   list-style: none;
-  max-width: 500px;
   word-wrap: break-word;
   .author {
     color: green;
@@ -613,19 +620,6 @@ color: $gray-light !important;
   .timestamp {
     color: $gray-light;
   }
-  .row {
-    padding: 0px;
-    width: 100%;
-    height: auto;
-    .row {
-      border-top: 1px solid $border-color;
-      margin: 0;
-      padding: 1.4rem 0px;
-      p {
-        margin: 0;
-      }
-    }
-  }
   h4 {
     margin-bottom: 0px;
   }
@@ -633,7 +627,19 @@ color: $gray-light !important;
     margin: 1.4em 0;
   }
   li {
-    -webkit-flex-direction: row;
+    max-width: 500px;
+    margin:auto;
     display: flex;
+    -webkit-flex-direction: row;
+    padding: 1em 0;
+    border-top: 1px solid $border-color;
+    .row-fluid {
+      width: 100%;
+      margin: 0;
+      padding: 1.4rem 0px;
+      p {
+        margin: 0;
+      }
+    }
   }
 }
