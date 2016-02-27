@@ -1,4 +1,4 @@
-<li id="comment-<% comment.id %>">
+<li id="comment-<%= comment.id %>">
   <div class="row-fluid">
       <div class="text-sm-right col-sm-4">
         <div class="author"><%= User.find_by(comment.user_id).name %></div>

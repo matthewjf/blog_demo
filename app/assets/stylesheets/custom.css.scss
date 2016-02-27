@@ -486,12 +486,16 @@ color: $gray-light !important;
       margin: auto;
     }
   }
+  .body li {
+    list-style: initial;
+    list-style-position: inside;
+    padding-bottom: initial;
+  }
 }
 
 /* post show */
 
 .post {
-  list-style: none;
   margin-bottom: 60px;
   h1 {
     font-size: 3em;
@@ -506,11 +510,20 @@ color: $gray-light !important;
     padding-bottom: 2em;
   }
   .post-body {
-    padding-bottom: 1em;
+    margin-bottom: 2.5em;
+    max-width: 660px;
+    .body ul > li {
+      list-style: initial;
+      list-style-position: inside;
+      padding-bottom: initial;
+    }
   }
   .timestamp {
     color: $gray-light;
     display: block;
+  }
+  .sections {
+    list-style: none;
   }
   .section {
     margin-bottom: 1em;
@@ -519,7 +532,7 @@ color: $gray-light !important;
       margin-bottom: 16px;
     }
     .image {
-      margin-bottom: 1.4em;
+      margin-bottom: 1em;
       margin-left: auto;
       margin-right: auto;
       .img {
@@ -530,6 +543,16 @@ color: $gray-light !important;
         font-style: italic;
         color: $gray-light;
       }
+    }
+    .body ul > li {
+      list-style: initial;
+      list-style-position: inside;
+      padding-bottom: initial;
+    }
+    .section-body ul > li {
+      list-style: initial;
+      list-style-position: inside;
+      padding-bottom: initial;
     }
   }
   .labels {
@@ -548,16 +571,9 @@ color: $gray-light !important;
       color: $gray-light;
     }
   }
-  .post-body {
-    max-width: 660px;
-  }
-  ul {
-    -webkit-padding-start: 0;
-  }
-  li {
-    &:last-child {
-      padding-bottom: 1em;
-    }
+  ul > li {
+    list-style: none;
+    padding-bottom: 2em;
   }
 }
 
@@ -628,12 +644,11 @@ color: $gray-light !important;
     margin:auto;
     display: flex;
     -webkit-flex-direction: row;
-    padding: 1em 0;
     .row-fluid {
       border-top: 1px solid $border-color;
       width: 100%;
       margin: 0;
-      padding: 1.4rem 0px;
+      padding: 1.4em 0px;
       p {
         margin: 0;
       }
