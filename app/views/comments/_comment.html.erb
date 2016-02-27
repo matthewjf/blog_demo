@@ -1,7 +1,7 @@
 <li id="comment-<%= comment.id %>">
   <div class="row-fluid">
       <div class="text-sm-right col-sm-4">
-        <div class="author"><%= User.find_by(comment.user_id).name %></div>
+        <div class="author"><%= User.find(comment.user_id).name %></div>
         <div class="timestamp">
           <%= time_ago_in_words(comment.created_at).gsub('about','') %> ago
         </div>
