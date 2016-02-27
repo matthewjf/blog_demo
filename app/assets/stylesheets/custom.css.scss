@@ -240,10 +240,6 @@ h2 {
   }
 }
 
-.navbar {
-  border-bottom: none;
-}
-
 .navbar-right {
   ul {
     float: right;
@@ -266,14 +262,6 @@ footer {
   padding-top: 5px;
   padding: 0;
   width: 100%;
-  background-color: $gray-lighter;
-  color: $gray-light;
-  a {
-    color: $gray;
-    &:hover {
-      color: $gray-darker;
-    }
-  }
   small {
     float: left;
   }
@@ -281,10 +269,8 @@ footer {
     float: right;
     list-style: none;
     line-height: 1;
-    margin: 1em 0;
     li {
       float: left;
-      margin-left: 15px;
     }
   }
 }
