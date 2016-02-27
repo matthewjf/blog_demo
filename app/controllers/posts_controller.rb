@@ -50,8 +50,10 @@ class PostsController < ApplicationController
 
   private
     def post_params
-      params.require(:post).permit(:title, :body, :picture, :picture_caption, :label_list,
-            sections_attributes: [:id, :title, :body, :picture, :picture_caption, :_destroy])
+      params.require(:post).permit(
+            :title, :body, :picture, :picture_caption, :label_list, :published,
+            sections_attributes:
+              [:id, :title, :body, :picture, :picture_caption, :_destroy])
     end
 
     def correct_user

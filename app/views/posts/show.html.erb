@@ -1,10 +1,14 @@
 <% provide(:title, @post.title) %>
 <div class="post">
-  <div class="admin-links">
-    <% if logged_in? && current_user.admin? %>
+  <% if logged_in? && current_user.admin? %>
+    <div class="admin-links">
       <%= link_to "edit", edit_post_path(@post) %>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
+
+  <% unless @post.published %>
+    <h1 class="unpublished row">--Unpublished--</h1>
+  <% end %>
 
   <figure class="image-container centered">
     <% if @post.picture? %>

@@ -576,6 +576,13 @@ color: $gray-light !important;
   }
 }
 
+
+.unpublished {
+  color: $red;
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: center !important;
+}
 /* labels index */
 
 .labels {
