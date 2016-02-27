@@ -631,6 +631,10 @@ color: $gray-light !important;
   .timestamp {
     color: $gray-light;
   }
+  .missing_user {
+    text-decoration: line-through;
+    color: $gray-light;
+  }
   h4 {
     margin-bottom: 0px;
   }
