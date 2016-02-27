@@ -195,8 +195,8 @@ textarea {
 
 
 .centered{
-    float: none;
-    margin: 0 auto;
+  float: none;
+  margin: 0 auto;
 }
 
 /* typography */
@@ -281,11 +281,10 @@ footer {
   background-color: $gray-darker;
   margin: -15px -15px 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column-reverse;
   min-height: 400px;
   .content {
-    width: 100%;
+    max-width: 1270px;
   }
   .logo {
     color: $primary;
@@ -297,12 +296,13 @@ footer {
   h1 {
     color: #444;
     margin-bottom: 10px;
+    text-align: left;
   }
   h2 {
     color: #888;
     font-weight: normal;
     margin-top: 10px;
-    margin-bottom: 45px;
+    text-align: left;
   }
 }
 /* sidebar */
