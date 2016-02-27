@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     CFPropertyList (2.3.2)
+    RedCloth (4.2.9)
     actionmailer (4.2.2)
       actionpack (= 4.2.2)
       actionview (= 4.2.2)
@@ -333,6 +334,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  RedCloth
   autosize-rails
   bcrypt (= 3.1.7)
   bootstrap-sass (= 3.2.0.0)

@@ -20,7 +20,7 @@
         <%= @post.created_at.to_date.to_formatted_s :long %>
       </span>
     </div>
-    <div class="body"><%= simple_format(h @post.body.html_safe) %></div>
+    <div class="body"><%= RedCloth.new(@post.body).to_html.html_safe  %></div>
     <div class="sections"><%= render 'shared/sections' %></div>
     <div class="centered">
       <span class="labels"><%= render 'shared/labels' %></span>

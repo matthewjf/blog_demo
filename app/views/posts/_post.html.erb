@@ -9,11 +9,10 @@
         <%= post.created_at.to_date.to_formatted_s :long %>
       </span>
         <div class="body">
-          <%= sanitize(post.body.html_safe.truncate(255, separator: '.')) %>
-          <%= link_to "read on", post %>
+          <%= sanitize(RedCloth.new(post.body).to_html.html_safe.truncate(255, separator: ' ')) %>
         </div>
         <% if post.labels.any? %>
-          <span class="labels">
+          <span class="labels text-right">
             <% post.labels.each do |label| %>
               <%= link_to label.name, label, class: "btn" %>
             <% end %>

@@ -443,7 +443,7 @@ color: $gray-light !important;
   list-style: none;
   padding: 0px;
   .title {
-    margin-top: 5em;
+    margin-top: 0;
     padding-top: 0;
     a {
       color: inherit;
@@ -462,6 +462,7 @@ color: $gray-light !important;
     max-width: 1270px;
     margin:auto;
     display: flex;
+    flex-wrap: wrap;
     -webkit-flex-direction: row;
     padding: 2em 0;
     border-top: 1px solid $border-color;
@@ -475,7 +476,7 @@ color: $gray-light !important;
       padding: 0px;
     }
     .body {
-      padding-bottom:16px;
+      padding-bottom: 16px;
     }
     .row-fluid {
       width: 100%;
@@ -618,14 +619,18 @@ color: $gray-light !important;
   h3 {
     margin: 1.4em 0;
   }
+  #error_explanation {
+    max-width: 400px;
+    margin: auto;
+  }
   li {
     max-width: 500px;
     margin:auto;
     display: flex;
     -webkit-flex-direction: row;
     padding: 1em 0;
-    border-top: 1px solid $border-color;
     .row-fluid {
+      border-top: 1px solid $border-color;
       width: 100%;
       margin: 0;
       padding: 1.4rem 0px;
