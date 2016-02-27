@@ -25,6 +25,12 @@ $label-background: hsl(0, 0%, 98%);
   background-size: cover;
 }
 
+@mixin default_list {
+  list-style: initial;
+  margin-left: 20px;
+  padding-bottom: initial;
+}
+
 @font-face {
     font-family: 'OpenSans';
     src: font-url('OpenSans-Regular.ttf') format('truetype');
@@ -338,6 +344,7 @@ aside {
 .gravatar {
   float: left;
   margin-right: 10px;
+  vertical-align: top;
 }
 
 .gravatar_edit {
@@ -487,9 +494,7 @@ color: $gray-light !important;
     }
   }
   .body li {
-    list-style: initial;
-    list-style-position: inside;
-    padding-bottom: initial;
+      @include default_list;
   }
 }
 
@@ -513,9 +518,7 @@ color: $gray-light !important;
     margin-bottom: 2.5em;
     max-width: 660px;
     .body ul > li {
-      list-style: initial;
-      list-style-position: inside;
-      padding-bottom: initial;
+      @include default_list;
     }
   }
   .timestamp {
@@ -545,14 +548,10 @@ color: $gray-light !important;
       }
     }
     .body ul > li {
-      list-style: initial;
-      list-style-position: inside;
-      padding-bottom: initial;
+      @include default_list;
     }
     .section-body ul > li {
-      list-style: initial;
-      list-style-position: inside;
-      padding-bottom: initial;
+      @include default_list;
     }
   }
   .labels {
