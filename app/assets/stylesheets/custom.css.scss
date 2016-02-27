@@ -618,7 +618,9 @@ color: $gray-light !important;
   list-style: none;
   word-wrap: break-word;
   .author {
-    color: green;
+    a {
+      color: green;
+    }
   }
   .comment-form {
     max-width: 400px;
