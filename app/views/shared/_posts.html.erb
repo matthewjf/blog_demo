@@ -4,7 +4,7 @@
     <ol class="posts">
       <%= render @posts %>
     </ol>
+    <%= will_paginate @posts , page_links: false, class: "pagination" %>
   </div>
 </div>
-<%= will_paginate @posts , page_links: false, class: "pagination" %>
 <% end %>

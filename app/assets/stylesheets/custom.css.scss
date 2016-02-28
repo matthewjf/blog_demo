@@ -142,7 +142,7 @@ textarea {
 .btn {
   border: none;
   text-decoration: none;
-  border-radius: 3px;
+  border-radius: 2px;
   outline: none !important;
   &:focus {
     box-shadow: none;
@@ -165,7 +165,7 @@ textarea {
 
 .form-control {
   box-shadow: none !important;
-  border-radius: 3px;
+  border-radius: 2px;
   font-size: inherit;
 }
 
@@ -417,9 +417,6 @@ input {
     overflow: auto;
     padding: 10px 0;
   }
-  .pagination {
-    text-align: center;
-  }
 }
 
 /* miscellaneous */
@@ -450,8 +447,11 @@ color: $gray-light !important;
 
 .pagination {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   ul {
-    margin: auto;
+    // margin: auto;
+    float: right;
   }
   ul > li {
     border-top: none;
@@ -624,7 +624,7 @@ color: $gray-light !important;
     padding: 5px 8px;
     margin-right: 2px;
     border: 1px solid $border-color;
-    border-radius: 3px;
+    border-radius: 2px;
     background-color: $label-background;
     font-size: 14px;
     &:hover {
