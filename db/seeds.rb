@@ -6,6 +6,9 @@ User.create!(name:  "Example User",
              activated: true,
              activated_at: Time.zone.now )
 
+StaticPage.create!(name: "About", content: "blank")
+StaticPage.create!(name: "Contact", content: "blank")
+
 unless Rails.env.production?
   User.create!(name:  "Non-admin User",
               email: "example@example.com",

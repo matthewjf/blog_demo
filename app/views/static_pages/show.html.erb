@@ -1,0 +1,8 @@
+<%= provide(:title, @page.name) %>
+<% if logged_in? && current_user.admin? %>
+  <div class="admin-links">
+    <%= link_to "edit", edit_static_page_path(@page) %>
+  </div>
+<% end %>
+<h1><%= @page.name %></h1>
+<p><%= RedCloth.new(@page.content).to_html.html_safe %></p>

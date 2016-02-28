@@ -1,5 +1,5 @@
 class LabelsController < ApplicationController
-  before_action :admin_user, except: [:index, :show]
+  before_action :admin_only, except: [:index, :show]
 
   def index
     @labels = Label.all
