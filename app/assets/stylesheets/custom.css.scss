@@ -205,6 +205,10 @@ textarea {
   margin: 0 auto;
 }
 
+.float-right {
+  float: right;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -556,9 +560,6 @@ color: $gray-light !important;
   }
   .labels {
     margin: 1.4em 0px;
-  }
-  .float-right {
-    float: right;
   }
   .image-container {
     max-width: 768px;

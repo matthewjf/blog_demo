@@ -1,8 +1,8 @@
 == README
 
-# My blog
+# Rig blog
 
-Sample application
+Blog application
 
 * Ruby version: 4.2.2
 

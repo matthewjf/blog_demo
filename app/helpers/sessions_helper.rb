@@ -49,4 +49,23 @@ module SessionsHelper
   def store_location
     session[:forwarding_url] = request.url
   end
+
+  def logged_in_user
+    unless logged_in?
+      store_location
+      flash[:danger] = "Please log in"
+      redirect_to login_url
+    end
+  end
+
+  def admin_only
+    unless logged_in? && current_user.admin?
+      flash[:danger] = "Access denied"
+      redirect_back_or root_url
+    end
+  end
+
+  def admin_user?
+    logged_in? && current_user.admin?
+  end
 end

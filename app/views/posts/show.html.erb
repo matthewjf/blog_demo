@@ -6,7 +6,7 @@
     </div>
   <% end %>
 
-  <% unless @post.published %>
+  <% unless @post.published? %>
     <h1 class="unpublished row">--Unpublished--</h1>
   <% end %>
 

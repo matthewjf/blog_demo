@@ -9,11 +9,14 @@ class Post < ActiveRecord::Base
 
   accepts_nested_attributes_for :sections, allow_destroy: true, reject_if: :all_blank
 
+  scope :get_published, -> { where(published: true) }
+  scope :get_unpublished, -> { where(published: false) }
   default_scope -> { order(created_at: :desc) }
   validates :user_id, presence: true
   validates :title, presence: true
   validates :body, presence: true
-  # validates :picture, presence: true
+
+  self.per_page = 10
 
   def label_list
     labels.join(", ")

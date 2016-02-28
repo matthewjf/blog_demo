@@ -1,10 +1,14 @@
 class PostsController < ApplicationController
-  before_action :admin_user, except: [:index, :show]
+  before_action :admin_only, except: [:index, :show]
   before_action :logged_in_user, except: [:index, :show]
   before_action :correct_user, only: [:edit, :update]
 
   def index
-    @posts = Post.paginate(page: params[:page])
+    @posts = Post.get_published.paginate(page: params[:page])
+  end
+
+  def pending
+    @posts = Post.get_unpublished.paginate(page: params[:page])
   end
 
   def show
@@ -12,6 +16,7 @@ class PostsController < ApplicationController
     @sections = @post.sections
     @comments = @post.comments.paginate(page: params[:page])
     @comment = @post.comments.build
+    admin_only unless @post.published?
   end
 
   def new

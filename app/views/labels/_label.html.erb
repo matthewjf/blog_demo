@@ -1,7 +1,12 @@
 <li>
+  <row-fluid>
   <%= link_to label.name, label %>
   <% if logged_in? && current_user.admin? %>
     | <%= link_to "edit", edit_label_path(label) %>
     <%= link_to "delete", label, method: :delete, data: {confirm: "You Sure?"} %>
   <% end %>
+  <span class="float-right">
+    (<%= label.posts.where(published: true).count %>)
+  </span>
+</row-fluid>
 </li>

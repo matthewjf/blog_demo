@@ -7,7 +7,7 @@ class LabelsController < ApplicationController
 
   def show
     @label = Label.find(params[:id])
-    @posts = @label.posts.paginate(page: params[:page])
+    @posts = @label.posts.where(published: true).paginate(page: params[:page])
   end
 
   def destroy

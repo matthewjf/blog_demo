@@ -4,7 +4,8 @@
     <nav class="navbar-right">
       <ul class="nav navbar-nav navbar-right">
         <% if logged_in? %>
-          <% if current_user.admin? %>
+          <% if admin_user? %>
+            <li><%= link_to "Pending", posts_pending_path %></li>
             <li><%= link_to "Users", users_path %></li>
           <% end %>
           <li class="dropdown">
