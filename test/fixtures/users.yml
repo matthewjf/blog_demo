@@ -13,6 +13,7 @@ archer:
   password_digest: <%= User.digest('password') %>
   activated: true
   activated_at: <%= Time.zone.now %>
+  admin: false
 
 lana:
   name: Lana Kane
@@ -20,6 +21,7 @@ lana:
   password_digest: <%= User.digest('password') %>
   activated: true
   activated_at: <%= Time.zone.now %>
+  admin: false
 
 malory:
   name: Malory Archer
@@ -27,6 +29,7 @@ malory:
   password_digest: <%= User.digest('password') %>
   activated: true
   activated_at: <%= Time.zone.now %>
+  admin: false
 
 <% 30.times do |n| %>
 user_<%= n %>:
@@ -35,4 +38,5 @@ user_<%= n %>:
   password_digest: <%= User.digest('password') %>
   activated: true
   activated_at: <%= Time.zone.now %>
+  admin: false
 <% end %>
