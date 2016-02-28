@@ -6,8 +6,5 @@
     </ol>
   </div>
 </div>
-
-  <div class="pagination">
-    <%= will_paginate @posts , page_links: false %>
-  </div>
+<%= will_paginate @posts , page_links: false, class: "pagination" %>
 <% end %>

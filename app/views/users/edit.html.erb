@@ -9,9 +9,10 @@
     <div class="gravatar_edit">
       <%= gravatar_for @user %>
       <a href="http://gravatar.com/emails" target="_blank">change</a>
+      <div class="float-right text-right">
+        <%= link_to "delete account", @user, method: :delete, data: {confirm: "You Sure?"} %>
+      </div>
     </div>
-    <div class="float-right text-right">
-      <%= link_to "delete account", @user, method: :delete, data: {confirm: "You Sure?"} %>
-    </div>
+
   </div>
 </div>

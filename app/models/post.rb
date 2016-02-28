@@ -16,7 +16,7 @@ class Post < ActiveRecord::Base
   validates :title, presence: true
   validates :body, presence: true
 
-  self.per_page = 10
+  self.per_page = 8
 
   def label_list
     labels.join(", ")

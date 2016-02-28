@@ -448,6 +448,32 @@ color: $gray-light !important;
 color: $gray-light !important;
 }
 
+.pagination {
+  display: flex;
+  ul {
+    margin: auto;
+  }
+  ul > li {
+    border-top: none;
+  }
+  li > a {
+    color: $red;
+    &:hover {
+      background-color: $red;
+      color: white;
+      border-color: $red;
+    }
+  }
+  .disabled > a {
+    // visibility: hidden;
+  }
+  .active > a {
+    background-color: $red !important;
+    color: white !important;
+    border-color: $red !important;
+  }
+}
+
 /* posts index */
 
 .posts {
