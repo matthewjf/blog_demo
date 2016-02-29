@@ -3,6 +3,7 @@
   <% if logged_in? && current_user.admin? %>
     <div class="admin-links">
       <%= link_to "edit", edit_post_path(@post) %>
+      | <%= link_to "delete", @post, method: :delete, data: {confirm: "You Sure?"} %>
     </div>
   <% end %>
 
