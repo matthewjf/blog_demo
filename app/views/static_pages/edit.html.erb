@@ -1,12 +1,13 @@
 <% provide(:title, "Edit #{@page.name}") %>
+<div class="form centered">
+  <h1>Edit <%= @page.name %> page</h1>
 
-<h1>Edit <%= @page.name %> page</h1>
+  <%= form_for(@page) do |f| %>
+    <%= render 'shared/error_messages', object: f.object  %>
 
-<%= form_for(@page) do |f| %>
-  <%= render 'shared/error_messages', object: f.object  %>
+    <%= f.label :content %>
+    <%= f.text_area :content, class: 'form-control field-group' %>
 
-  <%= f.label :content %>
-  <%= f.text_area :content, class: 'form-control field-group' %>
-
-  <%= f.submit "Save", class: "btn btn-primary" %>
-<% end %>
+    <%= f.submit "Save", class: "btn btn-primary" %>
+  <% end %>
+</div>

@@ -1,5 +1,4 @@
 <% provide(:title, "Pending posts") %>
-<h1 class="centered text-center">Pending posts</h1>
 
 <% if logged_in? && current_user.admin? %>
   <div class="admin-links">
@@ -7,6 +6,7 @@
   </div>
 <% end %>
 
+<h1 class="centered text-center">Pending posts</h1>
 
 <div class="posts">
   <%= render 'shared/posts' %>

@@ -1,11 +1,19 @@
 # encoding: utf-8
 
 class PictureUploader < CarrierWave::Uploader::Base
-
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
-  process resize_to_limit: [768, 768]
+
+  process :auto_orient
+
+  def auto_orient
+    manipulate! do |image|
+      image.tap(&:auto_orient)
+    end
+  end
+
+  process resize_to_limit: [1200, 768]
 
   # Choose what kind of storage to use for this uploader:
   if Rails.env.production?
