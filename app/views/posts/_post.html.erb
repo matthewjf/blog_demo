@@ -12,7 +12,7 @@
         <%= post.created_at.to_date.to_formatted_s :long %>
       </span>
         <div class="body">
-          <%= strip_tags RedCloth.new(post.body).to_html.truncate(255, separator: ' ') %>
+          <%= sanitize RedCloth.new(post.body).to_html.truncate(255, separator: ' ') %>
         </div>
         <% if post.labels.any? %>
           <span class="labels text-right">
