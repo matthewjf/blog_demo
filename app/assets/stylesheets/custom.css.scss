@@ -219,14 +219,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 3em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
@@ -309,11 +308,13 @@ footer {
 
 .jumbotron {
   h1 {
+    font-size: 4em;
     color: #444;
     margin-bottom: 10px;
     text-align: left;
   }
   h2 {
+    font-size: 1.4em;
     color: #888;
     font-weight: normal;
     margin-top: 10px;
@@ -524,6 +525,8 @@ color: $gray-light !important;
       padding: 0px;
     }
     .body {
+      color: #555;
+      font-size: 1.2em;
       padding-bottom: 16px;
     }
     .row-fluid {
@@ -550,7 +553,9 @@ color: $gray-light !important;
     text-align: left;
   }
   .post-header {
-    margin-bottom: 1em;
+    font-size: 16px;
+    margin-bottom: 2em;
+    // text-align: center;
   }
   .body {
     padding-bottom: 2em;
@@ -560,6 +565,10 @@ color: $gray-light !important;
     max-width: 660px;
     .body ul > li {
       @include default_list;
+    }
+    p {
+      font-size: 1.2em;
+      color: #555;
     }
   }
   .timestamp {
@@ -572,6 +581,7 @@ color: $gray-light !important;
   .section {
     margin-bottom: 1em;
     .title {
+      // text-align: center;
       margin-top: 0px;
       margin-bottom: 16px;
     }
@@ -611,6 +621,9 @@ color: $gray-light !important;
   ul > li {
     list-style: none;
     padding-bottom: 2em;
+  }
+  footer {
+    font-size: 16px;
   }
 }
 

@@ -17,18 +17,18 @@
     <% end %>
   </figure>
   <div class="post-body centered">
-    <div class="post-header">
+    <header class="post-header">
       <h1><%= @post.title %></h1>
       <span class="timestamp">
         <%= @post.created_at.to_date.to_formatted_s :long %>
       </span>
-    </div>
+    </header>
     <div class="body"><%= RedCloth.new(@post.body).to_html.html_safe  %></div>
     <div class="sections"><%= render 'shared/sections' %></div>
-    <div class="centered">
+    <footer class="centered">
       <span class="labels"><%= render 'shared/labels' %></span>
       <span class="float-right"><%= link_to "back to posts", root_url %></span>
-    </div>
+    </footer>
   </div>
 
   <div class="comments centered">
