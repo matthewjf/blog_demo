@@ -308,7 +308,6 @@ footer {
 
 .jumbotron {
   h1 {
-    font-size: 4em;
     color: #444;
     margin-bottom: 10px;
     text-align: left;
@@ -525,8 +524,7 @@ color: $gray-light !important;
       padding: 0px;
     }
     .body {
-      color: #555;
-      font-size: 1.2em;
+      line-height: 1.6;
       padding-bottom: 16px;
     }
     .row-fluid {
@@ -567,8 +565,7 @@ color: $gray-light !important;
       @include default_list;
     }
     p {
-      font-size: 1.2em;
-      color: #555;
+      line-height: 1.6;
     }
   }
   .timestamp {
@@ -581,7 +578,6 @@ color: $gray-light !important;
   .section {
     margin-bottom: 1em;
     .title {
-      // text-align: center;
       margin-top: 0px;
       margin-bottom: 16px;
     }
