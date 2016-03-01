@@ -478,7 +478,7 @@ color: $gray-light !important;
     }
   }
   .disabled > a {
-    // visibility: hidden;
+    color: #ccc !important;
   }
   .active > a {
     background-color: $red !important;
