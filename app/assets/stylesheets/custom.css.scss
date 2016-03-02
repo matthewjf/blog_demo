@@ -566,13 +566,12 @@ color: $gray-light !important;
   .post-header {
     font-size: 16px;
     margin-bottom: 2em;
-    // text-align: center;
   }
   .body {
-    padding-bottom: 1.6em;
+    padding-bottom: 2em;
   }
   .post-body {
-    margin-bottom: 2.5em;
+    margin-bottom: 2em;
     max-width: 660px;
     .body ul > li {
       @include default_list;
