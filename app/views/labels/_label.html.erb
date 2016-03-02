@@ -6,7 +6,7 @@
     <%= link_to "delete", label, method: :delete, data: {confirm: "You Sure?"} %>
   <% end %>
   <span class="float-right">
-    (<%= label.posts.where(published: true).count %>)
+    (<%= label.posts.where("published_at IS NOT NULL").count %>)
   </span>
 </row-fluid>
 </li>
