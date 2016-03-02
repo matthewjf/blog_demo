@@ -515,8 +515,8 @@ color: $gray-light !important;
     display: flex;
     flex-wrap: wrap;
     -webkit-flex-direction: row;
-    padding: 2em 0;
     border-top: 1px solid $border-color;
+    padding: 1em 0;
     &:nth-child(1) {
       border-top: none;
     }
@@ -528,7 +528,6 @@ color: $gray-light !important;
     }
     .body {
       line-height: 1.6;
-      padding-bottom: 16px;
       font-size: 18px;
     }
     .row-fluid {
@@ -537,6 +536,14 @@ color: $gray-light !important;
     @media (max-width: 768px)  {
       max-width: 500px;
       margin: auto;
+    }
+    figure {
+      padding-top: 1em;
+      padding-bottom: 1em;
+    }
+    .content {
+      padding-top: 1em;
+      padding-bottom: 1em;
     }
   }
   .body li {

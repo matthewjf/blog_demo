@@ -3,7 +3,7 @@
     <figure class="<%= "col-sm-5" if post.picture? %>">
       <%= link_to image_tag(post.picture.url(:medium), class: "img"), post %>
     </figure>
-    <div class="<%= post.picture? ? "col-sm-7" : "col-sm-12" %>">
+    <div class="<%= post.picture? ? "col-sm-7 content" : "col-sm-12 content" %>">
       <span class="h2 title"><%= link_to post.title, post %></span>
       <% if post.published %>
         <span class="timestamp">
