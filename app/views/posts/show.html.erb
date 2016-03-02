@@ -36,8 +36,10 @@
     </footer>
   </div>
 
-  <div class="comments centered">
-    <%= render 'shared/comments' %>
-    <%= render partial: 'comments/form', id: "form" %>
-  </div>
+  <% if @post.published %>
+    <div class="comments centered">
+      <%= render 'shared/comments' %>
+        <%= render partial: 'comments/form', id: "form" %>
+    </div>
+  <% end %>
 </div>
