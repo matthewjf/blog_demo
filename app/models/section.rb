@@ -5,6 +5,9 @@ class Section < ActiveRecord::Base
 
   validate  :picture_size
 
+  default_scope -> { order(created_at: :asc) }
+
+
   private
 
     # Validates the size of an uploaded picture.
