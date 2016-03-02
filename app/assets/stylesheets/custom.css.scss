@@ -569,7 +569,7 @@ color: $gray-light !important;
     // text-align: center;
   }
   .body {
-    padding-bottom: 2em;
+    padding-bottom: 1.6em;
   }
   .post-body {
     margin-bottom: 2.5em;
@@ -580,12 +580,12 @@ color: $gray-light !important;
     p {
       line-height: 1.6;
       font-size: 18px;
-      margin-top: 1.6em;
     }
   }
   .timestamp {
     color: $gray-light;
     display: block;
+    margin-bottom: 1.6em;
   }
   .sections {
     list-style: none;
@@ -595,10 +595,10 @@ color: $gray-light !important;
     .title {
       font-size: 2.5em;
       margin-top: 0px;
-      margin-bottom: 16px;
+      margin-bottom: 2rem;
     }
     .image {
-      margin-bottom: 1em;
+      margin-bottom: 2em;
       margin-left: auto;
       margin-right: auto;
       .img {
