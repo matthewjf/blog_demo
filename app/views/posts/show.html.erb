@@ -2,15 +2,15 @@
 <div class="post">
   <% if logged_in? && current_user.admin? %>
     <div class="admin-links">
-      <%= link_to "edit", edit_post_path(@post) %>
+      <%= link_to "edit", edit_post_path(@post) %> |
+      <% if @post.published %>
+        <%= link_to "unpublish", [:unpublish, @post], data: {confirm: "You Sure?"} %>
+      <% else %>
+      <%= link_to "publish", [:publish, @post], data: {confirm: "You Sure?"} %>
+      <% end %>
       | <%= link_to "delete", @post, method: :delete, data: {confirm: "You Sure?"} %>
     </div>
   <% end %>
-
-  <% unless @post.published? %>
-    <h1 class="unpublished row">--Unpublished--</h1>
-  <% end %>
-
   <figure class="image-container centered">
     <% if @post.picture? %>
       <%= link_to image_tag(@post.picture.url, class: "image"), @post.picture.url %>
@@ -20,9 +20,13 @@
   <div class="post-body centered">
     <header class="post-header">
       <h1><%= @post.title %></h1>
-      <span class="timestamp">
-        <%= @post.created_at.to_date.to_formatted_s :long %>
-      </span>
+      <% if @post.published %>
+        <span class="timestamp">
+          <%= @post.published_at.to_date.to_formatted_s :long %>
+        </span>
+      <% else %>
+        <p class="unpublished row">--Unpublished--</p>
+      <% end %>
     </header>
     <div class="body"><%= RedCloth.new(@post.body).to_html.html_safe  %></div>
     <div class="sections"><%= render 'shared/sections' %></div>

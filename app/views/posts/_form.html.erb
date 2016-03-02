@@ -2,11 +2,6 @@
   <%= form_for(@post, html: { multipart: true }) do |f| %>
     <%= render 'shared/error_messages', object: f.object %>
 
-    <%= f.label :published, class: "checkbox inline field-group" do %>
-      <%= f.check_box :published %>
-      <span>Publish this post</span>
-    <% end %>
-
     <%= f.label :title %>
     <%= f.text_field :title, class: 'form-control' %>
 

@@ -26,15 +26,15 @@ unless Rails.env.production?
       admin: false)
   end
 
-  def create_seed_post(published = true)
+  def create_seed_post(published_at = Time.now.to_date)
     content = Faker::Lorem.paragraph
     title = Faker::Lorem.words.join(' ')
     section_title = Faker::Lorem.words.join(' ')
     section_content = Faker::Lorem.paragraph
-    post = User.find(1).posts.create!(body: content, title: title, published: published)
+    post = User.find(1).posts.create!(body: content, title: title, published_at: published_at)
     post.sections.create!(title: section_title, body: section_content)
   end
 
   15.times { create_seed_post }
-  5.times { create_seed_post(false) }
+  5.times { create_seed_post(nil) }
 end

@@ -4,13 +4,14 @@
       <%= link_to image_tag(post.picture.url(:medium), class: "img"), post %>
     </figure>
     <div class="<%= post.picture? ? "col-sm-7" : "col-sm-12" %>">
-      <% unless post.published %>
-        <p class="text-center unpublished row">--Unpublished--</p>
-      <% end %>
       <span class="h2 title"><%= link_to post.title, post %></span>
-      <span class="timestamp">
-        <%= post.created_at.to_date.to_formatted_s :long %>
-      </span>
+      <% if post.published %>
+        <span class="timestamp">
+          <%= post.published_at.to_date.to_formatted_s :long %>
+        </span>
+      <% else %>
+        <p class="unpublished row">--Unpublished--</p>
+      <% end %>
         <div class="body">
           <%= sanitize RedCloth.new(post.body).to_html.truncate(255, separator: ' ') %>
         </div>
