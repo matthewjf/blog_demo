@@ -530,6 +530,7 @@ color: $gray-light !important;
     .body {
       line-height: 1.6;
       font-size: 18px;
+      color: rgba(34,34,34,.8);
       li {
         padding-top: 0;
         border-top: none;
@@ -585,6 +586,7 @@ color: $gray-light !important;
       line-height: 1.6;
       font-size: 18px;
       margin-bottom: 1em;
+      color: rgba(34,34,34,.8);
     }
   }
   .timestamp {
@@ -646,7 +648,7 @@ color: $gray-light !important;
 
 
 .unpublished {
-  color: $red;
+  color: $red !important;
   font-style: italic;
   text-transform: uppercase;
 }
