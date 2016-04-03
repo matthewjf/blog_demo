@@ -35,4 +35,8 @@ class Post < ActiveRecord::Base
   def published?
     self.published_at.nil? ? false : true
   end
+
+  def self.search(query)
+    # add some query method in here on labels, sections, title, body...  
+  end
 end

@@ -18,7 +18,7 @@ unless Rails.env.production?
               activated: true,
               activated_at: Time.zone.now )
   30.times do |n|
-    User.create!(name: "User #{n}",
+    User.create!(name: Faker::Superhero.name,
       email: "user-#{n}@example.com",
       password_digest: User.digest('password'),
       activated: true,
