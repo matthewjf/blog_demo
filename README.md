@@ -4,7 +4,7 @@
 
 Blog application
 
-[https://rig-blog.herokuapp.com/posts/9](https://rig-blog.herokuapp.com/posts/9)
+[https://rig-blog.herokuapp.com](https://rig-blog.herokuapp.com)
 
 # Todo
 
