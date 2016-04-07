@@ -4,16 +4,8 @@
 
 Blog application
 
-* Ruby version: 4.2.2
+[https://rig-blog.herokuapp.com/posts/9](https://rig-blog.herokuapp.com/posts/9)
 
-* Configuration
+# Todo
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+Build out a sample site with seed data and admin login
