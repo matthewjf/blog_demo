@@ -21,6 +21,7 @@ class UsersController < ApplicationController
   before_action :logged_in_user, except: [:new, :create]
   before_action :correct_user, only: [:edit, :update]
   before_action :correct_user_or_admin, only: [:destroy]
+  before_action :protected_user, only: [:update, :destroy]
 
   def index
     @users = User.paginate(page: params[:page])
@@ -46,6 +47,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = User.find(params[:id])
   end
 
   def update
@@ -63,6 +65,14 @@ class UsersController < ApplicationController
     redirect_to root_url
   end
 
+  def protected_user
+    @user = User.find(params[:id])
+    if @user == User.find(1)
+      flash[:danger] = "Cannot edit this account"
+      redirect_to @user
+    end
+  end
+
   private
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
@@ -77,5 +87,4 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
       redirect_to(root_url) unless current_user?(@user) || admin_user?
     end
-
 end
