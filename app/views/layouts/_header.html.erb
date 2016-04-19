@@ -22,6 +22,13 @@
             </ul>
           </li>
         <% else %>
+          <li class='btn-login'>
+            <%= form_for(:session, url: login_path) do |f| %>
+              <%= f.hidden_field :email, value: 'admin@rig.org' %>
+              <%= f.hidden_field :password, value: 'password' %>
+              <%= f.submit "Log in as admin", class: 'btn btn-primary' %>
+            <% end %>
+          </li>
           <li><%= link_to "Sign up", signup_path %></li>
           <li><%= link_to "Log in", login_path %></li>
         <% end %>

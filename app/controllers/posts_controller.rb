@@ -1,10 +1,26 @@
+# == Schema Information
+#
+# Table name: posts
+#
+#  id              :integer          not null, primary key
+#  user_id         :integer
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  title           :string
+#  picture         :string
+#  body            :text
+#  picture_caption :string
+#  published_at    :datetime
+#
+require 'byebug'
+
 class PostsController < ApplicationController
   before_action :admin_only, except: [:index, :show]
   before_action :logged_in_user, except: [:index, :show]
   before_action :correct_user, only: [:edit, :update]
 
   def index
-    @posts = Post.get_published.paginate(page: params[:page])
+    @posts = Post.get_published.paginate(page: params[:page]).includes(:labels)
   end
 
   def pending
