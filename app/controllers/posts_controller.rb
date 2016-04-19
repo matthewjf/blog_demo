@@ -12,7 +12,6 @@
 #  picture_caption :string
 #  published_at    :datetime
 #
-require 'byebug'
 
 class PostsController < ApplicationController
   before_action :admin_only, except: [:index, :show]

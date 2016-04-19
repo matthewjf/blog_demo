@@ -1,11 +1,7 @@
 == README
 
-# Rig blog
+# Rig demo
 
-Blog application
+Demo blog application
 
-[https://rig-blog.herokuapp.com](https://rig-blog.herokuapp.com)
-
-# Todo
-
-Build out a sample site with seed data and admin login
+[https://rig-demo.herokuapp.com](https://rig-demo.herokuapp.com)
